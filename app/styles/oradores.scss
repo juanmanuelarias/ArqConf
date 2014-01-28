@@ -1,0 +1,52 @@
+@mixin middle{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+@mixin center{
+	display: table-cell;
+	vertical-align: middle;
+	float: left;
+	text-align: center;
+	width: 100%;
+}
+
+.oradores ul{
+	padding: 0;
+	margin: 0;
+}
+
+.oradores li{
+	display: table;
+	list-style: none;
+}
+
+.picture {
+	@include middle;
+	width: 15%;
+	@media screen and (max-width: 991px) {
+		display: block;
+		margin: auto;
+	}
+}
+
+.name {
+	@include middle;
+	width: 30%;
+	@media screen and (max-width: 991px) {
+		@include center;
+	}
+}
+
+.description {
+	@include middle;
+	width: 55%;
+	@media screen and (max-width: 991px) {
+		@include center;
+	}
+}
+
+.name h4 a {
+    color: rgb(129, 129, 129);
+    font-size: 0.9em;
+}
