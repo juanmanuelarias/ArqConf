@@ -1,4 +1,5 @@
 $ligth-gray: rgb(129, 129, 129);
+$space-between-boxes: 30px;
 
 @mixin middle{
 	display: table-cell;
@@ -13,20 +14,20 @@ $ligth-gray: rgb(129, 129, 129);
 	width: 100%;
 }
 
-.oradores ul{
+.speakers-list {
 	padding: 0;
 	margin: 0;
 }
 
-.oradores li{
+.speakers-list li {
 	display: table;
 	list-style: none;
-	margin: 0 auto 30px auto;
+	margin: 0 auto $space-between-boxes auto;
 }
 
 .picture {
 	@include middle;
-	width: 15%;
+	// width: 15%;
 	padding-right: 20px;
 	@media screen and (max-width: 991px) {
 		display: block;
@@ -38,7 +39,7 @@ $ligth-gray: rgb(129, 129, 129);
 
 .name {
 	@include middle;
-	width: 30%;
+	// width: 30%;
 	@media screen and (max-width: 991px) {
 		@include center;
 	}
