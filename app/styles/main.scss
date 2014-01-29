@@ -2,6 +2,7 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'oradores.scss';
+@import 'home.scss';
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     font-family:Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -14,14 +15,30 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     padding: 0.2em 0;
 }
 
-/* Space out content a bit */
+html {
+    height: 100%;
+}
+
 body {
     padding-top: 20px;
     padding-bottom: 20px;
     font-family:Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 100%;
     @media screen and (max-width: 991px) {
         text-align: center;
     }
+}
+
+h1 {
+    font-size: 14em;
+}
+
+h2{
+    font-size: 3em;
+}
+
+h1, h2, h3 {
+    text-align: center;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
