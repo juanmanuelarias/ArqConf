@@ -3,6 +3,10 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'oradores.scss';
 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+    font-family:Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -14,6 +18,10 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 body {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-family:Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    @media screen and (max-width: 991px) {
+        text-align: center;
+    }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -90,32 +98,13 @@ body {
     background: #eee;
     border-radius: 250px;
     border: 2px solid #fff;
-    box-shadow: 0px 0px 3px #aaa;
-    float: left;
+    box-shadow: 0px 0px 3px #aaa;    
 }
 
 .circle-small {
     width: 80px;
     height: 80px;
     @extend .circle;
-}
-
-.item-description {
-    margin-bottom: 80px;
-    padding-top:30px;
-}
-
-.item-description h4{
-    
-}
-
-.item-description h4 a{
-    color: rgb(129, 129, 129);
-    font-size: 0.9em;
-}
-
-.item > .circle {
-    
 }
 
 .dashes{

@@ -1,3 +1,5 @@
+$ligth-gray: rgb(129, 129, 129);
+
 @mixin middle{
 	display: table-cell;
 	vertical-align: middle;
@@ -19,14 +21,18 @@
 .oradores li{
 	display: table;
 	list-style: none;
+	margin: 0 auto 30px auto;
 }
 
 .picture {
 	@include middle;
 	width: 15%;
+	padding-right: 20px;
 	@media screen and (max-width: 991px) {
 		display: block;
 		margin: auto;
+		padding-right: 0;
+		width: inherit;
 	}
 }
 
@@ -41,12 +47,20 @@
 .description {
 	@include middle;
 	width: 55%;
+	text-align: right;
+	line-height: 170%;
 	@media screen and (max-width: 991px) {
 		@include center;
 	}
 }
 
 .name h4 a {
-    color: rgb(129, 129, 129);
+    color: $ligth-gray;
     font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.name > p > span {
+	margin-left: 5px;
+	color: $ligth-gray;
 }
