@@ -51,6 +51,7 @@ $ligth-gray: rgb(129, 129, 129);
 	// width: 55%;
 	text-align: center;
 	line-height: 170%;
+	font-size: 1.5em;
 	@media screen and (max-width: 991px) {
 		@include center;
 	}
