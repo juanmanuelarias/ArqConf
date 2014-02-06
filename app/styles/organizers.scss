@@ -1,0 +1,7 @@
+.organizers ul{
+	@extend %no-space-box;
+}
+
+.organizers ul li {
+	@extend %li-table;
+}

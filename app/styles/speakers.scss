@@ -1,0 +1,8 @@
+.speakers ul{
+	@extend %no-space-box;
+}
+
+.speakers ul li {
+	@extend %li-table;
+	width: 100%;
+}

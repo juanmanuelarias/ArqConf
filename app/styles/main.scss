@@ -1,9 +1,14 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
-@import "oradores";
+@import "list";
+@import "row-table";
+@import "speakers";
+@import "organizers";
+@import "organizadores";
 @import "home";
 @import "titles";
+
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
     font-family:Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -25,7 +30,7 @@ body {
     padding-bottom: 20px;
     font-family:Raleway,"Helvetica Neue",Helvetica,Arial,sans-serif;
     height: 100%;
-    @media screen and (max-width: 991px) {
+    @media screen and (max-width: $screen-sm) {
         text-align: center;
     }
 }
