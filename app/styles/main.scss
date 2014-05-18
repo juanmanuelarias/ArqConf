@@ -1,9 +1,13 @@
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 
 @import 'sass-bootstrap/lib/bootstrap';
+@import "speakers";
+@import "program";
+
+
 @import "list";
 @import "row-table";
-@import "speakers";
+
 @import "organizers";
 @import "organizadores";
 @import "home";
