@@ -13,6 +13,7 @@
 
 .speakers li {
 	list-style-type: none;
+ 	margin-left: -45px; // my fix for row-table extra space
 }
 
 .speakers .name {
