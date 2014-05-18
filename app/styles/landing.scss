@@ -24,8 +24,9 @@
         font-size: 3em;
     }
 
-    h1, h2, h3 {
+    h1, h2, h3, h4, h5 {
         text-align: center;
+        margin-top: 20px;
     }
         
     @media (max-width: $screen-xs-max) { 
