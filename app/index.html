@@ -36,6 +36,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
+				<a class="navbar-brand" href="#home">arqConf</a>
 			</div>
 
 			<!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,7 +54,7 @@
 			</div>
 		</nav>
 
-		<section class="home">
+		<section id="home">
 			<div class="home-title">
 				<h1>arqConf</h1>
 				<h2>Buenos Aires, 2 de Junio 2014</h2>
@@ -303,6 +304,24 @@
 			e.src='//www.google-analytics.com/analytics.js';
 			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 			ga('create','UA-XXXXX-X');ga('send','pageview');
+		</script>
+
+		<script type="text/javascript">
+			$(function() {
+				var offset = 50;
+			  $('nav a').click(function() {
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+			        $('html,body').animate({
+			          scrollTop: target.offset().top - offset
+			        }, 1000);
+			        return false;
+			      }
+			    }
+			  });
+			});
 		</script>
 
 		<!-- build:js scripts/plugins.js -->
