@@ -6,3 +6,25 @@
 // 	@extend %li-table;
 // 	width: 100%;
 // }
+
+.speakers .row {
+	margin-bottom: 20px;
+}
+
+.speakers li {
+	list-style-type: none;
+}
+
+.speakers .name {
+	@media screen and (max-width: 991px) {
+		margin-left: 30px;
+	}
+}
+
+.speakers .name h4 > a {
+	margin-left: 5px;
+}
+
+.speakers .name p > span {
+	margin-left: 5px;
+}
