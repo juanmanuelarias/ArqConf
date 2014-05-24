@@ -3,246 +3,104 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>arconf</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width">
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:100,300" type="text/css">
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<!-- build:css styles/vendor.css -->
-		<!-- bower:css -->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>arconf</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:100,300" type="text/css">
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
 
-		<!-- endbower -->
-		<!-- endbuild -->
-		<!-- build:css(.tmp) styles/main.css -->
-		<link rel="stylesheet" href="styles/main.css">
-		<!-- endbuild -->
-		<script src="bower_components/modernizr/modernizr.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:css(.tmp) styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+	<script src="bower_components/modernizr/modernizr.js"></script>
+</head>
+<body>
+	<!--[if lt IE 10]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
 
-<style id="jsbin-css">
-
-@media (min-width: 992px){
-	.container {
-		width: 750px;
-	}
-}
-
-/* adjust body when menu is open */
-body.slide-active {
-    overflow-x: hidden
-}
-/*first child of #page-content so it doesn't shift around*/
-.no-margin-top {
-    margin-top: 0px!important
-}
-/*wrap the entire page content but not nav inside this div if not a fixed top, don't add any top padding */
-#page-content {
-    position: relative;
-    padding-top: 70px;
-    left: 0;
-}
-#page-content.slide-active {
-    padding-top: 0
-}
-/* put toggle bars on the left :: not using button */
-#slide-nav .navbar-toggle {
-    cursor: pointer;
-    position: relative;
-    line-height: 0;
-    float: left;
-    margin: 0;
-    width: 30px;
-    height: 40px;
-    padding: 10px 0 0 0;
-    border: 0;
-    background: transparent;
-}
-/* icon bar prettyup - optional */
-#slide-nav .navbar-toggle > .icon-bar {
-    width: 100%;
-    display: block;
-    height: 3px;
-    margin: 5px 0 0 0;
-}
-#slide-nav .navbar-toggle.slide-active .icon-bar {
-    background: rgb(33, 142, 194);
-}
-.navbar-header {
-    position: relative
-}
-/* un fix the navbar when active so that all the menu items are accessible */
-.navbar.navbar-fixed-top.slide-active {
-    position: relative
-}
-/* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
-@media (max-width:767px) { 
-	/*.navbar-nav > li {
-		margin-left: 20px;
-	}*/
-
-	.navbar-default .navbar-nav > li > a {
-		color: rgb(214, 214, 214);
-	}
-
-	.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-		color: white;
-		background-color: rgb(33, 142, 194);
-	}
-
-	#slide-nav .container {
-	    margin: 0;
-	    padding: 0!important;
-	}
-	#slide-nav .navbar-header {
-	    margin: 0 auto;
-	    padding: 0 15px;
-	}
-	#slide-nav .navbar.slide-active {
-	    position: absolute;
-	    width: 50%;
-	    top: -1px;
-	    z-index: 1000;
-	}
-	#slide-nav #slidemenu {
-	    background: #383d3f;
-	    left: -100%;
-	    width: 50%;
-	    min-width: 0;
-	    position: absolute;
-	    padding-left: 0;
-	    z-index: 2;
-	    /*top: -8px;*/
-	    margin: 0;
-	    text-align: left;
-	    position: fixed;
-	}
-	#slide-nav #slidemenu .navbar-nav {
-	    min-width: 0;
-	    width: 100%;
-	    margin: 0;
-	    /*margin-top: 50px;*/
-	    letter-spacing: 1px;
-	    color:white;
-	}
-	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
-	    min-width: 0;
-	    width: 50%;
-	    white-space: normal;
-	}
-	#slide-nav {
-	    border-top: 0;
-	    position: fixed;
-	}
-	#slide-nav.navbar-inverse #slidemenu {
-	    background: #333
-	}
-	/* this is behind the navigation but the navigation is not inside it so that the navigation is accessible and scrolls*/
-	#slide-nav #navbar-height-col {
-	    position: fixed;
-	    top: 0;
-	    height: 100%;
-	    width: 50%;
-	    left: -50%;
-	    background: #383d3f;
-	    text-align: left;
-	    padding-top: 15px;
-	    letter-spacing: 1px;
-	    padding-left: 15px;
-	    font-size: 16px;
-	    color: white;
-	}
-	#slide-nav.navbar-inverse #navbar-height-col {
-	    background: #333;
-	    z-index: 1;
-	    border: 0;
-	}
-	#slide-nav .navbar-form {
-	    width: 100%;
-	    margin: 8px 0;
-	    text-align: center;
-	    overflow: hidden;
-	    /*fast clearfixer*/
-	}
-	#slide-nav .navbar-form .form-control {
-	    text-align: center
-	}
-	#slide-nav .navbar-form .btn {
-	    width: 100%
-	}
-}
-@media (min-width:768px) { 
-	#page-content {
-	    left: 0!important
-	}
-	.navbar.navbar-fixed-top.slide-active {
-	    position: fixed
-	}
-	.navbar-header {
-	    left: 0!important
-	}
-}
-
-</style>
-
-	</head>
-	<body>
-		<!--[if lt IE 10]>
-			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
-	<div class="container">
-		<div class="navbar-header">
-			<a class="navbar-toggle"> 
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
-			<a class="navbar-brand" href="#">ARQCONF</a>
-		</div>
-		<div id="slidemenu">
-			<ul class="nav navbar-nav">
-				<li><a href="#speakers">Oradores</a></li>
-				<li><a href="#program">Programa</a></li>
-				<li><a href="#tickets">Tickets</a></li>
-				<li><a href="#sponsors">Sponsors</a></li>
-				<li><a href="#organizers">Organizadores</a></li>
-				<li><a href="#venue">Lugar</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
-
-		<section id="landing" class="home">
-			<div class="title">
-				<h1>|ARQ<span>CONF</span>|</h1>
-				<h2>Conferencia de Arquitectura IT</h2>
-				<h3>Buenos Aires - 5 de Junio 2014</h3>
-				<h4><a href="">@arqConf</a></h4>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-toggle"> 
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="navbar-brand" href="#">ARQCONF</a>
 			</div>
-		</section>
+			<div id="slidemenu">
+				<ul class="nav navbar-nav">
+					<li><a href="#speakers">Oradores</a></li>
+					<li><a href="#program">Programa</a></li>
+					<li><a href="#tickets">Tickets</a></li>
+					<li><a href="#sponsors">Sponsors</a></li>
+					<li><a href="#organizers">Organizadores</a></li>
+					<li><a href="#venue">Lugar</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-		<section id="speakers">
-			<div class="container speakers">
-				<h2>Oradores</h2>
-				<hr>
-				<ul>
-					<li class="row row-table">
-						<div class="col-sm-2">
-							<img src="http://m.c.lnkd.licdn.com/mpr/pub/image-es1d6PGhM_mNG_CrxGEFpf-zVCiwcWRRo5EDrhGhV8xSQgcfes1DR_fhVdwqQty15bCP/gustavo-andres-brey.jpg" alt="" class="circle">
-						</div>
-						<div class="col-sm-5 name">
-							<h4>Gustavo Brey<a href="https://twitter.com/italchemist">@italchemist</a></h4>
-							<p>Gerente de Tecnología<span>PAMI</span></p>
-						</div>
-						<div class="col-sm-4">
-							<p>Keynote</p>
-						</div>
-					</li>
-					<li class="row row-table">
+	<section id="landing" class="home">
+		<div class="title">
+			<h1>|ARQ<span>CONF</span>|</h1>
+			<h2>Conferencia de Arquitectura IT</h2>
+			<h3>Buenos Aires - 5 de Junio 2014</h3>
+			<h4><a href="">@arqConf</a></h4>
+		</div>
+	</section>
+
+	<section id="speakers">
+		<div class="container speakers">
+			<h2>Oradores</h2>
+			<hr>
+			<ul>
+				<li class="row row-table">
+					<div class="col-sm-2">
+						<img src="http://m.c.lnkd.licdn.com/mpr/pub/image-es1d6PGhM_mNG_CrxGEFpf-zVCiwcWRRo5EDrhGhV8xSQgcfes1DR_fhVdwqQty15bCP/gustavo-andres-brey.jpg" alt="" class="circle">
+					</div>
+					<div class="col-sm-5 name">
+						<h4>Gustavo Brey<a href="https://twitter.com/italchemist">@italchemist</a></h4>
+						<p>Gerente de Tecnología<span>PAMI</span></p>
+					</div>
+					<div class="col-sm-4">
+						<p>Keynote</p>
+					</div>
+				</li>
+				<li class="row row-table">
+					<div class="col-sm-2">
+						<img src="https://pbs.twimg.com/profile_images/1235753741/DSCN0992.JPG" alt="" class="circle">
+					</div>
+					<div class="col-sm-5 name">
+						<h4>Santiago Blanco<a href="#">@santiagomblanco</a></h4>
+						<p>Gerente de Arquitectura<span>TELECOM PERSONAL</span></p>
+					</div>
+					<div class="col-sm-4">
+						<p>Arquitectura Empresarial</p>
+					</div>
+				</li>
+				<li class="row row-table">
+					<div class="col-sm-2">
+						<img src="http://i.cloudup.com/woqkbSIcpR.jpg" alt="" class="circle">
+					</div>
+					<div class="col-sm-5 name">
+						<h4>Jonny Halife<a href="https://twitter.com/johnnyhalife">@johnnyhalife</a></h4>
+						<p>Chief Architect<span>MURAL.LY</span></p>
+					</div>
+					<div class="col-sm-4">
+						<p>Arquitecturas de Startups</p>
+					</div>
+				</li>
+				<!-- <li class="row row-table">
 						<div class="col-sm-2">
 							<img src="https://pbs.twimg.com/profile_images/1235753741/DSCN0992.JPG" alt="" class="circle">
 						</div>
@@ -251,312 +109,220 @@ body.slide-active {
 							<p>Gerente de Arquitectura<span>TELECOM PERSONAL</span></p>
 						</div>
 						<div class="col-sm-4">
-							<p>Arquitectura Empresarial</p>
+							<p>Arquitectura Empresarial, o el dilema de lidiar con gente</p>
 						</div>
-					</li>
-					<li class="row row-table">
-						<div class="col-sm-2">
-							<img src="http://i.cloudup.com/woqkbSIcpR.jpg" alt="" class="circle">
-						</div>
-						<div class="col-sm-5 name">
-							<h4>Jonny Halife<a href="https://twitter.com/johnnyhalife">@johnnyhalife</a></h4>
-							<p>Chief Architect<span>MURAL.LY</span></p>
-						</div>
-						<div class="col-sm-4">
-							<p>Arquitecturas de Startups</p>
-						</div>
-					</li>
-					<!-- <li class="row row-table">
-							<div class="col-sm-2">
-								<img src="https://pbs.twimg.com/profile_images/1235753741/DSCN0992.JPG" alt="" class="circle">
-							</div>
-							<div class="col-sm-5 name">
-								<h4>Santiago Blanco<a href="#">@santiagomblanco</a></h4>
-								<p>Gerente de Arquitectura<span>TELECOM PERSONAL</span></p>
-							</div>
-							<div class="col-sm-4">
-								<p>Arquitectura Empresarial, o el dilema de lidiar con gente</p>
-							</div>
-					</li> -->
-				</ul>
-			</div>
-		</section>
+				</li> -->
+			</ul>
+		</div>
+	</section>
 
-		<section id="program">
-			<div class="container program">
-				<div class="row marketing">
-					<h2>Programa</h2>
-					<hr>
-					<div class="col-lg-12">
-						<h4>Keynote</h4>
-						<p></p>
-						<p>19:00 - 19:20</p>
-
-						<h4>Arquitectura Personal</h4>
-						<p></p>
-						<p>19:20 - 19:50</p>
-
-						<h4 class="break">Cafe y Expo de Sponsors #1</h4>
-						<p></p>
-						<p>19:50 - 20:00</p>
-
-						<h4>Arquitectura MercadoLibre</h4>
-						<p></p>
-						<p>20:00 - 21:30</p>
-
-						<h4 class="break">Expo de Sponsors #2</h4>
-						<p></p>
-						<p>21:30 - 21:40</p>
-
-						<h4>Arquitectura Murally</h4>
-						<p></p>
-						<p>21:50 - 22:20</p>
-
-						<h4>Panel</h4>
-						<p></p>
-						<p>22:20 - 22:40</p>
-					</div>
-				</div>
-			</div>
-		</section>
-	
-		<section id="tickets">
-			<div class="container">
-				<div class="row">
-					<h2>Tickets</h2>
-					<hr>
-					<div style="width:100%; text-align:left;" ><iframe  src="https://www.eventbrite.com/tickets-external?eid=11688569827&ref=etckt" frameborder="0" height="214" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com/r/etckt">Event Registration Online</a><span style="color:#ddd;"> for </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="https://www.eventbrite.com/e/arqconf-tickets-11688569827?ref=etckt">ArqConf</a> <span style="color:#ddd;">powered by</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com?ref=etckt">Eventbrite</a></div></div>
-				</div>
-			</div>
-		</section>
-
-		<section id="sponsors">
-			<div class="container sponsors">
-				<h2>Sponsors</h2>
+	<section id="program">
+		<div class="container program">
+			<div class="row marketing">
+				<h2>Programa</h2>
 				<hr>
-				<!-- <div class="row row-table marketing gold">
-					<div class="col-sm-4">
-						<img src="http://upload.wikimedia.org/wikipedia/commons/c/c4/Personal_logonuevo.png" alt="">
-					</div>
-					<div class="col-sm-4">
-						<img src="http://www.pct.org.ar/3-AcercaParque/35-Clusters/1-pinfo/cms-imgs/pct_logo_snoop_2.gif" alt="">
-					</div>
-					<div class="col-sm-4">
-						<img src="http://www.civicuk.com/images/redhat-logo1.jpg" alt="">
-					</div>
-				</div>
-				<div class="row row-table marketing plata">
-					<div class="col-sm-3">
-						<img src="http://upload.wikimedia.org/wikipedia/commons/c/c4/Personal_logonuevo.png" alt="">
-					</div>
-					<div class="col-sm-3">
-						<img src="http://www.pct.org.ar/3-AcercaParque/35-Clusters/1-pinfo/cms-imgs/pct_logo_snoop_2.gif" alt="">
-					</div>
-					<div class="col-sm-3">
-						<img src="http://www.civicuk.com/images/redhat-logo1.jpg" alt="">
-					</div>
-					<div class="col-sm-3">
-						<img src="http://www.mundou.com.ar/wp-content/uploads/2011/08/Becas-en-UADE.jpg" alt="">
-					</div>
-					<hr>
-				</div> -->
-			</div>
-		</section>
+				<div class="col-lg-12">
+					<h4>Keynote</h4>
+					<p></p>
+					<p>19:00 - 19:20</p>
 
-		<section id="organizers">
-			<div class="container organizers">
-				<h2>Organizadores</h2>
-				<hr>
-				<div class="row">
-					<div class="col-sm-2">
-						<img src="https://pbs.twimg.com/profile_images/3150536699/4f0c81b30e2b23290eda3bd66d81ddaf.png" alt="" class="circle-small">
-					</div>
-					<div class="col-sm-4">
-						<h4>Gustavo Brey<a href="https://twitter.com/italchemist">@italchemist</a></h4>
-						<p>Ingeniero en Sistemas, Nerd, Padre, Profesor, Gte de Tecnologia Pami, Gordo en recuperación, Patetico jugador de Tenis y fanático de All Boys</p>
-					</div>
-					<div class="col-sm-2">
-						<img src="https://pbs.twimg.com/profile_images/1432128054/darth-vader-face.jpg" alt="" class="circle-small">
-					</div>
-					<div class="col-sm-4">
-						<h4>Gastón Coco<a href="https://twitter.com/santiagococo">@santiagococo</a></h4>
-						<p>Apasionado de la arquitectura de software y el desarrollo, tratando seguirle el ritmo a la tecnología. Fan de Pink Floyd, Maiden, Metallica, etc.</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-2">
-						<img src="https://pbs.twimg.com/profile_images/1235753741/DSCN0992.JPG" alt="" class="circle-small">
-					</div>
-					<div class="col-sm-4">
-						<h4>Santiago Blanco<a href="https://twitter.com/santiagomblanco">@santiagomblanco</a></h4>
-						<p>Ingeniero de profesión, techie por elección. Mi amor por independiente lo heredé, y aun que mi familia piense igual que yo no logré</p>
-					</div>
-					<div class="col-sm-2">
-						<img src="https://pbs.twimg.com/profile_images/1553401731/cara.jpg" alt="" class="circle-small">
-					</div>
-					<div class="col-sm-4">
-						<h4>Jorge García<a href="https://twitter.com/chorch_utn">@chorch_utn</a></h4>
-						<p></p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-2">
-						<img src="https://pbs.twimg.com/profile_images/213800562/MP.JPG" alt="" class="circle-small">
-					</div>
-					<div class="col-sm-4">
-						<h4>Fabian Pezet<a href="https://twitter.com/fabianbsas">@fabianbsas</a></h4>
-						<p>Java Architect and Web Developer , Young entrepreneur and Lover of the extreme sport</p>
-					</div>
-					<div class="col-sm-2">
-						<img src="https://pbs.twimg.com/profile_images/2769157740/20b26e9accfb511921c7cf9bd031c896.png" alt="" class="circle-small">
-					</div>
-					<div class="col-sm-4">
-						<h4>Juan Manuel Arias<a href="https://twitter.com/juanma_ari">@juanma_ari</a></h4>
-						<p>Software Engineer, #HTML5 and C# certified</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-2">
-						<img src="https://pbs.twimg.com/profile_images/2726102494/b195861e47d38c322a585a4c34a0eae8.jpeg" alt="" class="circle-small">
-					</div>
-					<div class="col-sm-4">
-						<h4>Pablo González<a href="https://twitter.com/p_gzl">@p_gzl</a></h4>
-						<p>Padre, esposo, musiquero, emprendedor y soñador... ah! también soy ingeniero</p>
-					</div>
-					<div class="col-sm-2">
-						<img src="http://m.c.lnkd.licdn.com/mpr/mpr/wc_200_200/p/3/005/022/268/3ee9876.jpg" alt="" class="circle-small">
-					</div>
-					<div class="col-sm-4">
-						<h4>Cristian Rios<a href="https://twitter.com/bsascristian">@bsascristian</a></h4>
-						<p>Ingeniero en Sistemas apasionado por las música y la tecnología</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-2">
-						<img src="" alt="" class="circle-small">
-					</div>
-					<div class="col-sm-4">
-						<h4>Nelson Ghezzi<a href=""></a></h4>
-						<p></p>
-					</div>
-				</div>
-		</section>
+					<h4>Arquitectura Personal</h4>
+					<p></p>
+					<p>19:20 - 19:50</p>
 
-		<section id="venue">
-			<div class="container venue">
-			<h2>Lugar</h2>
-				<hr>
-				<h3>UADE - Lima 775 Ciudad Autónoma de Buenos Aires</h3>
-			</div>
-			<iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Uade%20-%20Buenos%20Aires%2C%20Buenos%20Aires%20Province%2C%20Argentina&amp;output=embed"></iframe>
+					<h4 class="break">Cafe y Expo de Sponsors #1</h4>
+					<p></p>
+					<p>19:50 - 20:00</p>
 
-		<div class="footer">
-			<div class="container">
-				<p>arqconf.com.ar | arquitectura.it copyright 2014</p>
+					<h4>Arquitectura MercadoLibre</h4>
+					<p></p>
+					<p>20:00 - 21:30</p>
+
+					<h4 class="break">Expo de Sponsors #2</h4>
+					<p></p>
+					<p>21:30 - 21:40</p>
+
+					<h4>Arquitectura Murally</h4>
+					<p></p>
+					<p>21:50 - 22:20</p>
+
+					<h4>Panel</h4>
+					<p></p>
+					<p>22:20 - 22:40</p>
+				</div>
 			</div>
 		</div>
+	</section>
+	
+	<section id="tickets">
+		<div class="container">
+			<div class="row">
+				<h2>Tickets</h2>
+				<hr>
+				<div style="width:100%; text-align:left;" ><iframe  src="https://www.eventbrite.com/tickets-external?eid=11688569827&ref=etckt" frameborder="0" height="214" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe><div style="font-family:Helvetica, Arial; font-size:10px; padding:5px 0 5px; margin:2px; width:100%; text-align:left;" ><a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com/r/etckt">Event Registration Online</a><span style="color:#ddd;"> for </span><a style="color:#ddd; text-decoration:none;" target="_blank" href="https://www.eventbrite.com/e/arqconf-tickets-11688569827?ref=etckt">ArqConf</a> <span style="color:#ddd;">powered by</span> <a style="color:#ddd; text-decoration:none;" target="_blank" href="http://www.eventbrite.com?ref=etckt">Eventbrite</a></div></div>
+			</div>
+		</div>
+	</section>
 
-		<!-- build:js scripts/vendor.js -->
-		<!-- bower:js -->
-		<script src="bower_components/jquery/jquery.js"></script>
-		<!-- endbower -->
-		<!-- endbuild -->
+	<section id="sponsors">
+		<div class="container sponsors">
+			<h2>Sponsors</h2>
+			<hr>
+			<!-- <div class="row row-table marketing gold">
+				<div class="col-sm-4">
+					<img src="http://upload.wikimedia.org/wikipedia/commons/c/c4/Personal_logonuevo.png" alt="">
+				</div>
+				<div class="col-sm-4">
+					<img src="http://www.pct.org.ar/3-AcercaParque/35-Clusters/1-pinfo/cms-imgs/pct_logo_snoop_2.gif" alt="">
+				</div>
+				<div class="col-sm-4">
+					<img src="http://www.civicuk.com/images/redhat-logo1.jpg" alt="">
+				</div>
+			</div>
+			<div class="row row-table marketing plata">
+				<div class="col-sm-3">
+					<img src="http://upload.wikimedia.org/wikipedia/commons/c/c4/Personal_logonuevo.png" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img src="http://www.pct.org.ar/3-AcercaParque/35-Clusters/1-pinfo/cms-imgs/pct_logo_snoop_2.gif" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img src="http://www.civicuk.com/images/redhat-logo1.jpg" alt="">
+				</div>
+				<div class="col-sm-3">
+					<img src="http://www.mundou.com.ar/wp-content/uploads/2011/08/Becas-en-UADE.jpg" alt="">
+				</div>
+				<hr>
+			</div> -->
+		</div>
+	</section>
 
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-		<script>
-			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-			e.src='//www.google-analytics.com/analytics.js';
-			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-			ga('create','UA-XXXXX-X');ga('send','pageview');
-		</script>
+	<section id="organizers">
+		<div class="container organizers">
+			<h2>Organizadores</h2>
+			<hr>
+			<div class="row">
+				<div class="col-sm-2">
+					<img src="https://pbs.twimg.com/profile_images/3150536699/4f0c81b30e2b23290eda3bd66d81ddaf.png" alt="" class="circle-small">
+				</div>
+				<div class="col-sm-4">
+					<h4>Gustavo Brey<a href="https://twitter.com/italchemist">@italchemist</a></h4>
+					<p>Ingeniero en Sistemas, Nerd, Padre, Profesor, Gte de Tecnologia Pami, Gordo en recuperación, Patetico jugador de Tenis y fanático de All Boys</p>
+				</div>
+				<div class="col-sm-2">
+					<img src="https://pbs.twimg.com/profile_images/1432128054/darth-vader-face.jpg" alt="" class="circle-small">
+				</div>
+				<div class="col-sm-4">
+					<h4>Gastón Coco<a href="https://twitter.com/santiagococo">@santiagococo</a></h4>
+					<p>Apasionado de la arquitectura de software y el desarrollo, tratando seguirle el ritmo a la tecnología. Fan de Pink Floyd, Maiden, Metallica, etc.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2">
+					<img src="https://pbs.twimg.com/profile_images/1235753741/DSCN0992.JPG" alt="" class="circle-small">
+				</div>
+				<div class="col-sm-4">
+					<h4>Santiago Blanco<a href="https://twitter.com/santiagomblanco">@santiagomblanco</a></h4>
+					<p>Ingeniero de profesión, techie por elección. Mi amor por independiente lo heredé, y aun que mi familia piense igual que yo no logré</p>
+				</div>
+				<div class="col-sm-2">
+					<img src="https://pbs.twimg.com/profile_images/1553401731/cara.jpg" alt="" class="circle-small">
+				</div>
+				<div class="col-sm-4">
+					<h4>Jorge García<a href="https://twitter.com/chorch_utn">@chorch_utn</a></h4>
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2">
+					<img src="https://pbs.twimg.com/profile_images/213800562/MP.JPG" alt="" class="circle-small">
+				</div>
+				<div class="col-sm-4">
+					<h4>Fabian Pezet<a href="https://twitter.com/fabianbsas">@fabianbsas</a></h4>
+					<p>Java Architect and Web Developer , Young entrepreneur and Lover of the extreme sport</p>
+				</div>
+				<div class="col-sm-2">
+					<img src="https://pbs.twimg.com/profile_images/2769157740/20b26e9accfb511921c7cf9bd031c896.png" alt="" class="circle-small">
+				</div>
+				<div class="col-sm-4">
+					<h4>Juan Manuel Arias<a href="https://twitter.com/juanma_ari">@juanma_ari</a></h4>
+					<p>Software Engineer, #HTML5 and C# certified</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2">
+					<img src="https://pbs.twimg.com/profile_images/2726102494/b195861e47d38c322a585a4c34a0eae8.jpeg" alt="" class="circle-small">
+				</div>
+				<div class="col-sm-4">
+					<h4>Pablo González<a href="https://twitter.com/p_gzl">@p_gzl</a></h4>
+					<p>Padre, esposo, musiquero, emprendedor y soñador... ah! también soy ingeniero</p>
+				</div>
+				<div class="col-sm-2">
+					<img src="http://m.c.lnkd.licdn.com/mpr/mpr/wc_200_200/p/3/005/022/268/3ee9876.jpg" alt="" class="circle-small">
+				</div>
+				<div class="col-sm-4">
+					<h4>Cristian Rios<a href="https://twitter.com/bsascristian">@bsascristian</a></h4>
+					<p>Ingeniero en Sistemas apasionado por las música y la tecnología</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-2">
+					<img src="" alt="" class="circle-small">
+				</div>
+				<div class="col-sm-4">
+					<h4>Nelson Ghezzi<a href=""></a></h4>
+					<p></p>
+				</div>
+			</div>
+	</section>
 
-		<script>
-$(document).ready(function () {
+	<section id="venue">
+		<div class="container venue">
+		<h2>Lugar</h2>
+			<hr>
+			<h3>UADE - Lima 775 Ciudad Autónoma de Buenos Aires</h3>
+		</div>
+		<iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Uade%20-%20Buenos%20Aires%2C%20Buenos%20Aires%20Province%2C%20Argentina&amp;output=embed"></iframe>
 
+	<div class="footer">
+		<div class="container">
+			<p>arqconf.com.ar | arquitectura.it copyright 2014</p>
+		</div>
+	</div>
 
-    //stick in the fixed 100% height behind the navbar but don't wrap it
-    $('#slide-nav.navbar .container').append($('<div id="navbar-height-col">SECCIONES</div>'));
+	<!-- build:js scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/jquery.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
 
-    // Enter your ids or classes
-    var toggler = '.navbar-toggle';
-    var pagewrapper = '#page-content';
-    var navigationwrapper = '.navbar-header';
-    var menuwidth = '100%'; // the menu inside the slide menu itself
-    var slidewidth = '50%';
-    var menuneg = '-100%';
-    var slideneg = '-100%';
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+		e.src='//www.google-analytics.com/analytics.js';
+		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+		ga('create','UA-XXXXX-X');ga('send','pageview');
+	</script>
 
+	<!-- build:js scripts/plugins.js -->
+	<script src="bower_components/sass-bootstrap/js/affix.js"></script>
+	<script src="bower_components/sass-bootstrap/js/alert.js"></script>
+	<script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
+	<script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
+	<script src="bower_components/sass-bootstrap/js/modal.js"></script>
+	<script src="bower_components/sass-bootstrap/js/transition.js"></script>
+	<script src="bower_components/sass-bootstrap/js/button.js"></script>
+	<script src="bower_components/sass-bootstrap/js/popover.js"></script>
+	<script src="bower_components/sass-bootstrap/js/carousel.js"></script>
+	<script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
+	<script src="bower_components/sass-bootstrap/js/collapse.js"></script>
+	<script src="bower_components/sass-bootstrap/js/tab.js"></script>
+	<!-- endbuild -->
 
-    $("#slide-nav").on("click", toggler, function (e) {
-
-        var selected = $(this).hasClass('slide-active');
-
-        $('#slidemenu').stop().animate({
-            left: selected ? menuneg : '0px'
-        });
-
-        $('#navbar-height-col').stop().animate({
-            left: selected ? slideneg : '0px'
-        });
-
-        $(pagewrapper).stop().animate({
-            left: selected ? '0px' : slidewidth
-        });
-
-        $(navigationwrapper).stop().animate({
-            left: selected ? '0px' : slidewidth
-        });
-
-
-        $(this).toggleClass('slide-active', !selected);
-        $('#slidemenu').toggleClass('slide-active');
-
-
-        $('#page-content, .navbar, body, .navbar-header').toggleClass('slide-active');
-
-
-    });
-
-
-    var selected = '#slidemenu, #page-content, body, .navbar, .navbar-header';
-
-
-    $(window).on("resize", function () {
-
-        if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
-            $(selected).removeClass('slide-active');
-        }
-
-
-    });
-
-
-
-
-});
-</script>
-
-		
-
-		<!-- build:js scripts/plugins.js -->
-		<script src="bower_components/sass-bootstrap/js/affix.js"></script>
-		<script src="bower_components/sass-bootstrap/js/alert.js"></script>
-		<script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
-		<script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
-		<script src="bower_components/sass-bootstrap/js/modal.js"></script>
-		<script src="bower_components/sass-bootstrap/js/transition.js"></script>
-		<script src="bower_components/sass-bootstrap/js/button.js"></script>
-		<script src="bower_components/sass-bootstrap/js/popover.js"></script>
-		<script src="bower_components/sass-bootstrap/js/carousel.js"></script>
-		<script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
-		<script src="bower_components/sass-bootstrap/js/collapse.js"></script>
-		<script src="bower_components/sass-bootstrap/js/tab.js"></script>
-		<!-- endbuild -->
-
-		<!-- build:js({app,.tmp}) scripts/main.js -->
-		<script src="scripts/main.js"></script>
-		<!-- endbuild -->
+	<!-- build:js({app,.tmp}) scripts/main.js -->
+	<script src="scripts/main.js"></script>
+	<!-- endbuild -->
 </body>
 </html>
