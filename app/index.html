@@ -22,6 +22,13 @@
 		<script src="bower_components/modernizr/modernizr.js"></script>
 
 <style id="jsbin-css">
+
+@media (min-width: 992px){
+	.container {
+		width: 750px;
+	}
+}
+
 /* adjust body when menu is open */
 body.slide-active {
     overflow-x: hidden
@@ -60,7 +67,7 @@ body.slide-active {
     margin: 5px 0 0 0;
 }
 #slide-nav .navbar-toggle.slide-active .icon-bar {
-    background: orange
+    background: rgb(33, 142, 194);
 }
 .navbar-header {
     position: relative
@@ -74,6 +81,10 @@ body.slide-active {
 	/*.navbar-nav > li {
 		margin-left: 20px;
 	}*/
+
+	.navbar-default .navbar-nav > li > a {
+		color: rgb(214, 214, 214);
+	}
 
 	#slide-nav .container {
 	    margin: 0;
@@ -90,14 +101,14 @@ body.slide-active {
 	    z-index: 1000;
 	}
 	#slide-nav #slidemenu {
-	    background: #f7f7f7;
+	    background: #383d3f;
 	    left: -100%;
 	    width: 50%;
 	    min-width: 0;
 	    position: absolute;
 	    padding-left: 0;
 	    z-index: 2;
-	    top: -8px;
+	    /*top: -8px;*/
 	    margin: 0;
 	    text-align: left;
 	    position: fixed;
@@ -106,8 +117,9 @@ body.slide-active {
 	    min-width: 0;
 	    width: 100%;
 	    margin: 0;
-	    margin-top: 50px;
+	    /*margin-top: 50px;*/
 	    letter-spacing: 1px;
+	    color:white;
 	}
 	#slide-nav #slidemenu .navbar-nav .dropdown-menu li a {
 	    min-width: 0;
@@ -128,7 +140,13 @@ body.slide-active {
 	    height: 100%;
 	    width: 50%;
 	    left: -50%;
-	    background: #eee;
+	    background: #383d3f;
+	    text-align: left;
+	    padding-top: 15px;
+	    letter-spacing: 1px;
+	    padding-left: 15px;
+	    font-size: 16px;
+	    color: rgb(214, 214, 214);
 	}
 	#slide-nav.navbar-inverse #navbar-height-col {
 	    background: #333;
@@ -454,7 +472,7 @@ $(document).ready(function () {
 
 
     //stick in the fixed 100% height behind the navbar but don't wrap it
-    $('#slide-nav.navbar .container').append($('<div id="navbar-height-col"></div>'));
+    $('#slide-nav.navbar .container').append($('<div id="navbar-height-col">SECCIONES</div>'));
 
     // Enter your ids or classes
     var toggler = '.navbar-toggle';
@@ -463,7 +481,7 @@ $(document).ready(function () {
     var menuwidth = '100%'; // the menu inside the slide menu itself
     var slidewidth = '50%';
     var menuneg = '-100%';
-    var slideneg = '-50%';
+    var slideneg = '-100%';
 
 
     $("#slide-nav").on("click", toggler, function (e) {
