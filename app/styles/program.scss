@@ -1,0 +1,18 @@
+.program {
+	td {
+		line-height: 35px !important;
+		vertical-align: middle;
+	}
+
+	table > tbody > tr:nth-child(1) > td:nth-child(1) {
+		border-top: inherit;
+	}
+
+	table > tbody > tr:nth-child(1) > td:nth-child(2) {
+		border-top: inherit;
+	}
+
+	table > tbody > tr > td:nth-child(1) {
+		color: rgb(33, 142, 194);
+	}
+}

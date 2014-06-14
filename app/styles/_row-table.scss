@@ -10,9 +10,11 @@
     &.td-bottom { vertical-align: bottom!important; }
   }  
 }
+
 .row-table.row-table-xs {
   @include row-table;
 }
+
 @media (min-width: $screen-sm) {
   .row-table {
     @include row-table;

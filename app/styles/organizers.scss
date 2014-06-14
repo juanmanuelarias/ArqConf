@@ -1,7 +1,9 @@
-.organizers ul{
-	@extend %no-space-box;
-}
+.organizers {
+	.row {
+		margin-bottom: 20px;
+	}
 
-.organizers ul li {
-	@extend %li-table;
+	h4 > a {
+		margin-left: 5px;
+	}
 }
