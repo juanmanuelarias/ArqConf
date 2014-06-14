@@ -52,6 +52,30 @@ body.slide-active {
 .navbar.navbar-fixed-top.slide-active {
     position: relative
 }
+
+.navbar-default{
+	background: #6a7287;
+}
+
+.navbar-default .navbar-nav > li > a{
+	color: white;
+}
+
+.navbar-default .navbar-brand{
+	color:white;
+	font-weight: 600;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {
+	color: white;
+	border-bottom: 1px solid #24B4F8;
+}
+
 /* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */
 @media (max-width:767px) { 
 	/*.navbar-nav > li {
@@ -128,6 +152,7 @@ body.slide-active {
 	    padding-left: 15px;
 	    font-size: 16px;
 	    color: white;
+	    box-shadow: 5px 0px 13px #444444;
 	}
 	#slide-nav.navbar-inverse #navbar-height-col {
 	    background: #333;

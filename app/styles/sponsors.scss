@@ -1,13 +1,50 @@
 .sponsors {
+
+	h3 {
+		color: $blue;
+	}
+
+	
+
+	.platinum img {
+		width: 300px;
+	}
+
+	
+
 	.gold img {
 		width: 200px;
 	}
 
-	.plata img {
-		width: 100px;
+	
+
+	.silver img {
+		width: 100px;	
 	}
 
-	[class*="col-"] {
-		margin-bottom: 20px;
+	
+
+	@media (min-width: 767px) {
+		.platinum {
+			height: 300px;
+		}
+
+		.gold {
+			height: 200px;
+		}
+
+		.silver {
+			height: 150px;
+		}
+
+		[class*="col-"] {
+			margin-bottom: 20px;
+		}
+	}
+
+	@media (max-width:767px) { 
+		[class*="col-"] {
+			margin: 50px 0 50px 0;
+		}
 	}
 }
