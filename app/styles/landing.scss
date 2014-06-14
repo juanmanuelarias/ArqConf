@@ -4,11 +4,22 @@
 	height: 100%;
 	width: 100%;
 	display: table;
+    background: url("/images/background.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     .title {
         vertical-align: middle;
         display: table-cell;
         height: 90%;
+    }
+
+    .title-cover {
+        background:white;
+        opacity: 0.9;
+        padding: 20px;
     }
 
     .register {

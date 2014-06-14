@@ -6,6 +6,7 @@ $(function() {
 function configureScroll () {
   $('nav a').click(goToScroll);
   $('.register a').click(goToScroll);
+  $('.navbar-brand').click(goToScroll);
 }
 
 function goToScroll() {
