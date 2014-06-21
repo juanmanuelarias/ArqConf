@@ -3,10 +3,14 @@
 		font-size: 18px;
 		font-weight: 600;
 		text-align: center;
-	}
 
-	@media (max-width: $screen-xs-max) {
-		.map {
+	}
+	
+	.map {
+		@media (min-width: $screen-xs-max) {
+			height: 400px;
+		}
+		@media (max-width: $screen-xs-max) {
 			height: 200px;
 		}
 	}

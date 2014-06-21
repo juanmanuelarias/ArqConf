@@ -35,7 +35,7 @@
 			width: 550px;
 			padding-bottom: 20px;
 		}
-		@media (min-width: $screen-xs-max) {
+		@media (max-width: $screen-xs-max) {
 			padding: 0 20px 0 20px;
 		}
 	}
@@ -57,6 +57,12 @@
 			text-align: right;	
 		}
 	}
+	
+	.talk-name .more:after {
+		content: ' [+]'
+	}
 
-
+	.talk-name .less:after {
+		content: ' [-]'
+	}
 }
