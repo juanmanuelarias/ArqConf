@@ -1,6 +1,7 @@
 $(function() {
   configureScroll();
   configureOffcanvas();
+  toggleSpeakers();
 });
 
 function configureScroll () {
@@ -70,5 +71,11 @@ function configureOffcanvas () {
     if ($(window).width() > 767 && $('.navbar-toggle').is(':hidden')) {
       $(selected).removeClass('slide-active');
     }
+  });
+}
+
+function toggleSpeakers () {
+  $('.speakers > ul > li').click(function() {
+      $(this).find('.description').slideToggle();
   });
 }

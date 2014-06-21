@@ -6,6 +6,12 @@
 	li {
 		list-style-type: none;
 	 	margin-left: -45px; // my fix for row-table extra space
+	 	padding-top: 20px;
+	 	cursor:pointer;
+	}
+
+	li:hover {
+		background: #F1F7FC;
 	}
 
 	.name {
@@ -21,4 +27,36 @@
 	.name p > span {
 		margin-left: 5px;
 	}
+
+	.description {
+		display: none;
+		@media (min-width: $screen-xs-max) {
+			margin-left: 20%;
+			width: 550px;
+			padding-bottom: 20px;
+		}
+		@media (min-width: $screen-xs-max) {
+			padding: 0 20px 0 20px;
+		}
+	}
+
+	.talk {
+		font-weight: 600;
+	}
+
+	.about {
+		font-style: italic;
+		margin-top: 15px;
+	}
+
+	.talk-name {
+		font-weight: 600;
+		font-size: 19px;
+		color: $blue;
+		@media (min-width: $screen-xs-max) {
+			text-align: right;	
+		}
+	}
+
+
 }
