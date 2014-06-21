@@ -410,7 +410,8 @@ module.exports = function (grunt) {
         //'modernizr',
         'rev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'bower-install'
     ]);
 
     grunt.registerTask('default', [
