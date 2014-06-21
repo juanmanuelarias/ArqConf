@@ -4,4 +4,10 @@
 		font-weight: 600;
 		text-align: center;
 	}
+
+	@media (max-width: $screen-xs-max) {
+		.map {
+			height: 200px;
+		}
+	}
 }
