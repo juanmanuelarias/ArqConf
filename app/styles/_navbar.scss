@@ -5,6 +5,16 @@
 	}
 }
 
+.navbar-default {
+	transition: .3s;
+}
+
+.navbar-bigger {
+	@media (min-width: $screen-xs-max) {
+		padding: 10px 0 10px 0;
+	}
+}
+
 .navbar-fixed-top {
 	border: 0;
 }
