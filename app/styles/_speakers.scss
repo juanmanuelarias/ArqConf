@@ -1,4 +1,6 @@
 .speakers {
+	@extend %page-padding;
+
 	.row {
 		margin-bottom: 20px;
 	}
