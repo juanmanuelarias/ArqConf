@@ -2,6 +2,7 @@ $(function() {
   configureScroll();
   configureOffcanvas();
   toggleSpeakers();
+  animateNav();
 });
 
 function configureScroll () {
@@ -77,5 +78,18 @@ function configureOffcanvas () {
 function toggleSpeakers () {
   $('.speakers > ul > li').click(function() {
       $(this).find('.description').slideToggle();
+      $(this).find('.more').toggleClass('less');
+  });
+}
+
+function animateNav () {
+  var navbar = $('.navbar');
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 30) {
+        navbar.removeClass('navbar-bigger');
+    } else {
+        navbar.addClass('navbar-bigger');
+    }
   });
 }

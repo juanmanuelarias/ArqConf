@@ -5,6 +5,26 @@
 	}
 }
 
+.navbar .menu {
+	@media (min-width: 768px) and (max-width:790px){
+		padding: 0;
+	}
+}
+
+.navbar-default {
+	transition: .3s;
+}
+
+.navbar-bigger {
+	@media (min-width: $screen-xs-max) {
+		padding: 10px 0 10px 0;
+	}
+}
+
+.navbar-fixed-top {
+	border: 0;
+}
+
 /* adjust body when menu is open */
 body.slide-active {
     overflow-x: hidden
@@ -54,11 +74,12 @@ body.slide-active {
 }
 
 .navbar-default{
-	background: #6a7287;
+	background: rgba(104, 142, 175, 0.94);
 }
 
 .navbar-default .navbar-nav > li > a{
 	color: white;
+	font-weight: 600;
 }
 
 .navbar-default .navbar-brand{
@@ -73,7 +94,7 @@ body.slide-active {
 .navbar-default .navbar-nav > li > a:hover, 
 .navbar-default .navbar-nav > li > a:focus {
 	color: white;
-	border-bottom: 1px solid #24B4F8;
+	//border-bottom: 1px solid #24B4F8;
 }
 
 /* screw writing importants and shit, just stick it in max width since these classes are not shared between sizes */

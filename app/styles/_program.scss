@@ -1,4 +1,6 @@
 .program {
+	@extend %page-padding-sm;
+	
 	td {
 		line-height: 35px !important;
 		vertical-align: middle;

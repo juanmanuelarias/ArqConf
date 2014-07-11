@@ -9,25 +9,34 @@
 	<title>ArqConf</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width">
+	<meta property="og:title" content="Conferencia de Arquitectura IT" />
+	<meta property="og:site_name" content="ARQConf" />
+	<meta property="og:url" content="http://arqconf.com.ar" />
+	<meta property="og:description" content="ARQConf es la primer conferencia IT que busca promover y compartir conocimientos, métodos, técnicas y herramientas sobre Arquitectura de Software; basándose en experiencias de profesionales que han logrado implementar en casos prácticos las ideas teóricas, creando y desarrollando soluciones tecnológicas innovadoras y de primer nivel." />
+	<meta property="og:image" content="http://arqconf.com.ar/images/{rev}.background-3.jpg">
+	<meta property="og:type" content="website" />
+	<meta property="fb:admins" content="100000467201949" />
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:100,300" type="text/css">
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<!-- build:css styles/vendor.css -->
 	<!-- bower:css -->
-
+	<link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:css(.tmp) styles/main.css -->
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
 	<script src="bower_components/modernizr/modernizr.js"></script>
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-520035cd432e5481"></script>
 </head>
 <body>
 	<!--[if lt IE 10]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="slide-nav">
-		<div class="container">
+	<nav class="navbar navbar-default navbar-fixed-top navbar-bigger" role="navigation" id="slide-nav">
+		<a class="navbar-brand hidden-xs" href="#">ARQCONF</a>
+		<div class="container menu">
 			<div class="navbar-header">
 				<a class="navbar-toggle"> 
 					<span class="sr-only">Toggle navigation</span>
@@ -35,7 +44,6 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="navbar-brand" href="#">ARQCONF</a>
 			</div>
 			<div id="slidemenu">
 				<ul class="nav navbar-nav">
@@ -45,6 +53,7 @@
 					<li><a href="#sponsors">Sponsors</a></li>
 					<li><a href="#organizers">Organizadores</a></li>
 					<li><a href="#venue">Lugar</a></li>
+					<li><a href="#contact-us">Contacto</a></li>
 				</ul>
 			</div>
 		</div>
@@ -56,11 +65,16 @@
 				<h1>|ARQ<span>CONF</span>|</h1>
 				<h2>Conferencia de Arquitectura IT</h2>
 				<h3>Buenos Aires - 12 de Agosto 2014</h3>
-				<h4><a href="https://twitter.com/ArqConf">@ARQConf</a></h4>
 			</div>
 		</div>
 		<div class="register">
 			<a href="#tickets">Registrate Gratis Aquí</a>
+		</div>
+	</section>
+
+	<section>
+		<div class="container about">
+			<span>ARQConf</span> es la primer conferencia IT que busca promover y compartir conocimientos, métodos, técnicas y herramientas sobre <span>Arquitectura de Software</span>; basándose en experiencias de profesionales que han logrado implementar en casos prácticos las ideas teóricas, creando y desarrollando soluciones tecnológicas <span>innovadoras</span> y de <span>primer nivel</span>.
 		</div>
 	</section>
 
@@ -72,13 +86,13 @@
 				<li>
 					<div class="row row-table">
 						<div class="col-sm-2">
-							<img src="images/gustavo-brey.png" alt="" class="circle">
+							<img src="images/gustavo-brey.png" alt="" class="circle-big">
 						</div>
 						<div class="col-sm-5 name">
 							<h4>Gustavo Brey<a href="https://twitter.com/italchemist">@italchemist</a></h4>
 							<p>Gerente de Tecnología<span>PAMI</span></p>
 						</div>
-						<div class="col-sm-5 talk-name">Keynote</div>
+						<div class="col-sm-5 talk-name">Keynote<span class="more"></span></div>
 					</div>
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-2 description"></div>
@@ -87,13 +101,13 @@
 				<li>
 					<div class="row row-table">
 						<div class="col-sm-2">
-							<img src="images/santiago-blanco.png" alt="" class="circle">
+							<img src="images/santiago-blanco.png" alt="" class="circle-big">
 						</div>
 						<div class="col-sm-5 name">
 							<h4>Santiago Blanco<a href="http://twitter.com/santiagomblanco">@santiagomblanco</a></h4>
 							<p>Gerente de Arquitectura<span>TELECOM PERSONAL</span></p>
 						</div>
-						<div class="col-sm-5 talk-name">Arquitectura Personal</div>
+						<div class="col-sm-5 talk-name">Arquitectura Telecom Personal<span class="more"></span></div>
 					</div>
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-2 description">
@@ -107,13 +121,13 @@
 				<li>
 					<div class="row row-table">
 						<div class="col-sm-2">
-							<img src="images/johnny-halife.png" alt="" class="circle">
+							<img src="images/johnny-halife.png" alt="" class="circle-big">
 						</div>
 						<div class="col-sm-5 name">
 							<h4>Johnny Halife<a href="https://twitter.com/johnnyhalife">@johnnyhalife</a></h4>
 							<p>Chief Architect<span>MURAL.LY</span></p>
 						</div>
-						<div class="col-sm-5 talk-name">Startups Architectures</div>
+						<div class="col-sm-5 talk-name">Startups Architectures<span class="more"></span></div>
 					</div>
 					<div class="row">
 						<div class="col-sm-10 col-sm-offset-2 description"></div>
@@ -166,11 +180,13 @@
 	</section>
 	
 	<section id="tickets">
-		<div class="container">
+		<div class="container tickets">
 			<div class="row">
 				<h2 class="main-title">Tickets</h2>
 				<!-- <hr> -->
-				<div style="width:100%; text-align:left;" ><iframe  src="https://www.eventbrite.com/tickets-external?eid=11688569827&ref=etckt" frameborder="0" height="250" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe></div>
+				<div class="ticket-frame">
+					<iframe  src="https://www.eventbrite.com/tickets-external?eid=11688569827&ref=etckt" frameborder="0" width="100%" vspace="0" hspace="0" marginheight="5" marginwidth="5" scrolling="auto" allowtransparency="true"></iframe>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -179,8 +195,43 @@
 		<div class="container sponsors">
 			<h2 class="main-title">Sponsors</h2>
 			<hr>
-			<p class="text-center">¿Te interesa ser sponsor? Escribenos a <a href="mailto:info@arqconf.com.ar">info@arqconf.com.ar</a></p>
-		
+			<p class="contact">¿Te interesa ser sponsor? Escribenos a <a href="mailto:info@arqconf.com.ar">info@arqconf.com.ar</a></p>
+			<h3>Platinum</h3>
+			<div class="row row-table platinum">
+				<div class="col-sm-6">
+					<img src="holder.js/300x200">
+				</div>
+				<div class="col-sm-6">
+					<img src="holder.js/300x200">
+				</div>
+			</div>
+			<h3>Gold</h3>
+			<div class="row row-table gold">
+				<div class="col-sm-3">
+					<img src="holder.js/200x133">
+				</div>
+				<div class="col-sm-3">
+					<img src="holder.js/200x133">
+				</div>
+				<div class="col-sm-3">
+					<img src="holder.js/200x133">
+				</div>
+			</div>
+			<h3>Silver</h3>
+			<div class="row row-table silver">
+				<div class="col-xs-6">
+					<img src="holder.js/150x100">
+				</div>
+				<div class="col-xs-6">
+					<img src="holder.js/150x100">
+				</div>
+				<div class="col-xs-6">
+					<img src="holder.js/150x100">
+				</div>
+				<div class="col-xs-6">
+					<img src="holder.js/150x100">
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -217,7 +268,7 @@
 				</div>
 				<div class="col-md-3">
 					<h4>Jorge García<a href="https://twitter.com/chorch_utn">@chorch_utn</a></h4>
-					<p></p>
+					<p>Ingeniero en Sistemas, profesor y futuro padre. Solution Architect migrado al dark side que ahora depende de ventas</p>
 				</div>
 				<div class="col-md-1 text-center">
 					<img src="images/fabian-pezet.png" alt="" class="circle-small">
@@ -231,7 +282,7 @@
 				</div>
 				<div class="col-md-3">
 					<h4>Juan Manuel Arias<a href="https://twitter.com/juanma_ari">@juanma_ari</a></h4>
-					<p>Software Engineer, Enterprise Architect, HTML5 and C# certified</p>
+					<p>Software Engineer &amp; Enterprise Architect. Profesor en la UTN, apasionado por la tecnología. Certificado en HTML5 y C#</p>
 				</div>
 			</div>
 			<div class="row">
@@ -253,8 +304,19 @@
 					<img src="images/nelson-ghezzi.png" alt="" class="circle-small">
 				</div>
 				<div class="col-md-3">
-					<h4>Nelson Ghezzi</h4>
-					<p></p>
+					<h4>Nelson Ghezzi<a href="https://twitter.com/nelsong_it">@nelsong_it</a></h4>
+					<p>Desarrollador de software y entusiasta por aprender. Aficionado al piano y la bici</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-offset-4 col-md-1 text-center">
+						<img src="images/flavia-marinelli.png" alt="" class="circle-small">
+					</div>
+					<div class="col-md-3">
+						<h4>Flavia Marinelli</h4>
+						<p>Comunicadora Social &amp; Social Media en Open Source &amp; IT enviroment. Creativa y apasionada de la expresión artística</p>
+					</div>
 				</div>
 			</div>
 	</section>
@@ -263,50 +325,54 @@
 		<div class="venue">
 		<div class="container">
 			<h2 class="main-title">Lugar</h2>
-				<hr>
-				<h3>UADE - Lima 775 Ciudad Autónoma de Buenos Aires, Argentina</h3>	
-			</div>
-			<iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Uade%20-%20Buenos%20Aires%2C%20Buenos%20Aires%20Province%2C%20Argentina&amp;output=embed"></iframe>
+			<hr>
+			<h3>UADE - Lima 775 Ciudad Autónoma de Buenos Aires, Argentina</h3>	
 		</div>
-	<div class="footer">
-		<div>
-			<p>arqconf.com.ar | arquitectura.it copyright 2014</p>
+		<iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Uade%20-%20Buenos%20Aires%2C%20Buenos%20Aires%20Province%2C%20Argentina&amp;output=embed"></iframe>
+		</div>
+	</section>
+
+	<section id="contact-us">
+		<div class="contact-us container">
+			<h2 class="main-title">Contacto</h2>
+			<hr>
+			<div class="contact-info">
+				<a href="http://twitter.com/arqconf" class="social-icons-twitter_sm"></a>
+				<a href="mailto:info@arqconf.com.ar" class="social-icons-email_sm"></a>
+				<a href="https://www.facebook.com/arqconf.forit" class="social-icons-facebook_sm"></a>
+			</div>
+		</div>
+	</section>
+
+
+	<div class="container">
+		<div class="footer">
+			<hr>
+			<p>arqconf.com.ar | arquitectura.it</p>
 		</div>
 	</div>
 
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
 	<script src="bower_components/jquery/jquery.js"></script>
+	<script src="bower_components/sass-bootstrap/dist/js/bootstrap.js"></script>
+	<script src="bower_components/holderjs/holder.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 	<script>
-		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-		e.src='//www.google-analytics.com/analytics.js';
-		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-		ga('create','UA-XXXXX-X');ga('send','pageview');
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-37230564-6', 'arqconf.com.ar');
+	  ga('send', 'pageview');
 	</script>
-
-	<!-- build:js scripts/plugins.js -->
-	<script src="bower_components/sass-bootstrap/js/affix.js"></script>
-	<script src="bower_components/sass-bootstrap/js/alert.js"></script>
-	<script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
-	<script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
-	<script src="bower_components/sass-bootstrap/js/modal.js"></script>
-	<script src="bower_components/sass-bootstrap/js/transition.js"></script>
-	<script src="bower_components/sass-bootstrap/js/button.js"></script>
-	<script src="bower_components/sass-bootstrap/js/popover.js"></script>
-	<script src="bower_components/sass-bootstrap/js/carousel.js"></script>
-	<script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
-	<script src="bower_components/sass-bootstrap/js/collapse.js"></script>
-	<script src="bower_components/sass-bootstrap/js/tab.js"></script>
-	<!-- endbuild -->
 
 	<!-- build:js({app,.tmp}) scripts/main.js -->
 	<script src="scripts/main.js"></script>
 	<!-- endbuild -->
+	
 </body>
 </html>

@@ -1,7 +1,10 @@
 .sponsors {
-
+	@extend %page-padding-sm;
+	
+	text-align: center;
 	h3 {
 		color: $blue;
+		font-weight: 600;
 	}
 
 	.platinum img {
@@ -16,7 +19,16 @@
 		width: 150px;	
 	}
 
-	@media (min-width: 767px) {
+	.contact {
+		@media (min-width: $screen-sm-min) {
+			font-size: 25px;
+		}
+		@media (max-width: $screen-sm-min) {
+			font-size: 17px;
+		}
+	}
+
+	@media (min-width: $screen-sm-min) {
 		.platinum {
 			margin: 50px 0 100px 0;
 		}
@@ -28,15 +40,11 @@
 		.silver {
 			margin: 50px 0 50px 0;
 		}
-
-		[class*="col-"] {
-			margin-bottom: 20px;
-		}
 	}
 
-	@media (max-width:767px) { 
+	@media (max-width: $screen-sm-min) { 
 		[class*="col-"] {
-			margin: 50px 0 50px 0;
+			margin: 20px 0 10px 0;
 		}
 	}
 }

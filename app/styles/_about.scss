@@ -1,0 +1,19 @@
+.about {
+	@extend %page-padding;
+	
+	text-align: center;
+	margin-top: 35px;
+	margin-bottom: 20px;
+	line-height: 30px;
+
+	@media (min-width: $screen-xs-max) {
+		font-size: 18px;
+	}
+	@media (max-width: $screen-xs-max) {
+		font-size: 15px;
+	}
+}
+
+.about span {
+	font-weight: 600;
+}
