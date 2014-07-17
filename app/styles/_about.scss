@@ -12,6 +12,13 @@
 	@media (max-width: $screen-xs-max) {
 		font-size: 15px;
 	}
+
+	.conf-title {
+		text-align: center;
+		font-size: 23px;
+		font-style: italic;
+		color: #428bca;
+	}
 }
 
 .about span {
