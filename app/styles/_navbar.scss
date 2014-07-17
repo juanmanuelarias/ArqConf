@@ -62,8 +62,13 @@ body.slide-active {
     height: 3px;
     margin: 5px 0 0 0;
 }
+
+.navbar-default .navbar-toggle .icon-bar {
+	background: #FFF;
+}
+
 #slide-nav .navbar-toggle.slide-active .icon-bar {
-    background: rgb(33, 142, 194);
+    background: #FFF;
 }
 .navbar-header {
     position: relative
