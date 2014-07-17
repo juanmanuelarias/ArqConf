@@ -137,9 +137,6 @@ module.exports = function (grunt) {
             }
         },
 
-
-
-
         // Compiles Sass to CSS and generates necessary files if requested
         compass: {
             options: {
@@ -235,6 +232,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
+
         svgmin: {
             dist: {
                 files: [{
@@ -245,6 +243,7 @@ module.exports = function (grunt) {
                 }]
             }
         },
+
         htmlmin: {
             dist: {
                 options: {
@@ -336,7 +335,6 @@ module.exports = function (grunt) {
             }
         },
 
-
         // Generates a custom Modernizr build that includes only the tests you
         // reference in your app
         modernizr: {
@@ -369,7 +367,26 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+
+        'string-replace': {
+          ogimage: {
+            files: {
+               '<%= yeoman.dist %>/index.html': '<%= yeoman.dist %>/index.html'
+            },
+            options: {
+              replacements: [{
+                pattern: /<meta property=og:image content=(.*).jpg>/ig,
+                replacement: function (match, p1, offset, string) {
+                    var url = 'http://arqconf.com.ar/';
+                    var ogImage = match.replace(/images\/(.*)/ig, url + p1 + '.jpg>');
+                    return ogImage;
+                }
+              }]
+            }
+          }
         }
+
     });
 
 
@@ -420,7 +437,8 @@ module.exports = function (grunt) {
         'rev',
         'usemin',
         'htmlmin',
-        'bower-install'
+        'bower-install',
+        'string-replace:ogimage'
     ]);
 
     grunt.registerTask('default', [
