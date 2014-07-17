@@ -28,6 +28,40 @@
 		}
 	}
 
+	.add-new-container {
+		display: table;
+		margin: 0 auto;
+	}
+
+	.add-new {
+		background: #eee;
+		display: table;
+	}
+
+	.add-new:hover {
+		background: #E7E7E7;
+	}
+
+	.add-new-platinum {
+		width: 300px;
+		height: 200px;
+	}
+
+	.add-new-gold {
+		width: 200px;
+		height: 133px;
+	}
+
+	.add-new-silver {
+		width: 150px;
+		height: 100px;
+	}
+
+	.add-new a {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
 	@media (min-width: $screen-sm-min) {
 		.platinum {
 			margin: 50px 0 100px 0;
