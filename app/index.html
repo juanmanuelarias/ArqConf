@@ -18,24 +18,26 @@
 	<meta property="fb:admins" content="100000467201949" />
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:100,300" type="text/css">
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<!-- build:css styles/vendor.css -->
-	<!-- bower:css -->
-	<link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
-	<!-- endbower -->
+	
+	
+	<!-- build:css(.tmp) styles/bootstrap.css -->
+	<link rel="stylesheet" href="styles/bootstrap.css" />
 	<!-- endbuild -->
+	
 	<!-- build:css(.tmp) styles/main.css -->
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
+	
 	<script src="bower_components/modernizr/modernizr.js"></script>
 	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bd696b7d07bf74"></script>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
 	<!--[if lt IE 10]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<nav class="navbar navbar-default navbar-fixed-top navbar-bigger" role="navigation" id="slide-nav">
-		<a class="navbar-brand hidden-xs" href="#">ARQCONF</a>
+	<nav class="navbar navbar-default navbar-fixed-top navbar-top" role="navigation" id="slide-nav">
+		<a class="navbar-brand hidden-xs hidden-sm link-on-top" href="#landing">ARQCONF</a>
 		<div class="container menu">
 			<div class="navbar-header">
 				<a class="navbar-toggle"> 
@@ -47,13 +49,14 @@
 			</div>
 			<div id="slidemenu">
 				<ul class="nav navbar-nav">
-					<li><a href="#speakers">Oradores</a></li>
-					<li><a href="#program">Programa</a></li>
-					<li><a href="#tickets">Tickets</a></li>
-					<li><a href="#sponsors">Sponsors</a></li>
-					<li><a href="#organizers">Organizadores</a></li>
-					<li><a href="#venue">Lugar</a></li>
-					<li class="hidden-xs"><a href="#contact-us">Contacto</a></li>
+					<li class="active"><a class="link-on-top" href="#landing">Conferencia</a></li>
+					<li><a class="link-on-top" href="#speakers">Oradores</a></li>
+					<li><a class="link-on-top" href="#program">Programa</a></li>
+					<li><a class="link-on-top" href="#tickets">Tickets</a></li>
+					<li><a class="link-on-top" href="#sponsors">Sponsors</a></li>
+					<li><a class="link-on-top" href="#organizers">Organizadores</a></li>
+					<li><a class="link-on-top" href="#venue">Lugar</a></li>
+					<li class="hidden-xs"><a class="link-on-top" href="#contact-us">Contacto</a></li>
 				</ul>
 			</div>
 		</div>
@@ -379,7 +382,6 @@
 
 	<div class="container">
 		<div class="footer">
-			<hr>
 			<p>arqconf.com.ar | arquitectura.it</p>
 		</div>
 	</div>

@@ -84,12 +84,15 @@ function toggleSpeakers () {
 
 function animateNav () {
   var navbar = $('.navbar');
+  var links = $('.link-on-top');
   $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     if (scroll >= 30) {
-        navbar.removeClass('navbar-bigger');
+        navbar.removeClass('navbar-top');
+        links.addClass('link-on-scroll');
     } else {
-        navbar.addClass('navbar-bigger');
+        navbar.addClass('navbar-top');
+        links.removeClass('link-on-scroll');
     }
   });
 }

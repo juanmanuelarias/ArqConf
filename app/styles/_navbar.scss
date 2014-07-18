@@ -15,14 +15,12 @@
 	transition: .3s;
 }
 
-.navbar-bigger {
+.navbar-top {
+	background: none;
+	border: 0;
 	@media (min-width: $screen-xs-max) {
 		padding: 10px 0 10px 0;
 	}
-}
-
-.navbar-fixed-top {
-	border: 0;
 }
 
 /* adjust body when menu is open */
@@ -64,12 +62,9 @@ body.slide-active {
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-	background: #FFF;
+	background: $blue;
 }
 
-#slide-nav .navbar-toggle.slide-active .icon-bar {
-    background: #FFF;
-}
 .navbar-header {
     position: relative
 }
@@ -78,18 +73,44 @@ body.slide-active {
     position: relative
 }
 
-.navbar-default{
-	background: rgba(104, 142, 175, 0.94);
+.navbar {
+	.link-on-top{
+		font-weight: 600;
+	}
+
+	.link-on-scroll{
+		@media (min-width: 767px) {
+			color: rgb(60, 60, 60) !important;
+			font-weight: 600;
+		}
+	}
 }
 
-.navbar-default .navbar-nav > li > a{
-	color: white;
-	font-weight: 600;
+.navbar-default .navbar-nav > .active > a {
+	@media (min-width: 767px) {
+		border-bottom: 5px solid $blue;
+	}
+	@media (max-width: 767px) {
+		color: white;
+		background-color: #218ec2;
+	}
+}
+
+.nav .navbar-nav {
+	@media (min-width: 767px) {
+		width: 735px;
+	}
 }
 
 .navbar-default .navbar-brand{
 	color:white;
 	font-weight: 600;
+}
+
+.navbar .menu {
+	@media (min-width: 767px) {
+		width: 770px;
+	}
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
