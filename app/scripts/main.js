@@ -76,7 +76,7 @@ function configureOffcanvas () {
 }
 
 function toggleSpeakers () {
-  $('.speakers > ul > li').click(function() {
+  $('.speakers .expand').click(function() {
       $(this).find('.description').slideToggle();
       $(this).find('.more').toggleClass('less');
   });

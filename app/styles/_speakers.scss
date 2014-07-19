@@ -9,10 +9,13 @@
 		list-style-type: none;
 	 	margin-left: -45px; // my fix for row-table extra space
 	 	padding-top: 20px;
-	 	cursor:pointer;
 	}
 
-	li:hover {
+	.expand {
+		cursor:pointer;
+	}
+
+	.expand:hover {
 		background: #F1F7FC;
 	}
 
