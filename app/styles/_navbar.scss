@@ -16,7 +16,7 @@
 }
 
 .navbar-top {
-	background: none;
+	background: rgba(22, 22, 22, 0.71);
 	border: 0;
 	@media (min-width: $screen-xs-max) {
 		padding: 10px 0 10px 0;
@@ -104,7 +104,7 @@ body.slide-active {
 
 .navbar .menu {
 	@media (min-width: 767px) {
-		width: 800px;
+		width: 100%;
 	}
 }
 
