@@ -87,18 +87,13 @@ body.slide-active {
 }
 
 .navbar-default .navbar-nav > .active > a {
-	@media (min-width: 767px) {
+	@media (min-width: 768px) {
 		border-bottom: 5px solid $blue;
 	}
 	@media (max-width: 767px) {
 		color: white;
 		background-color: #218ec2;
-	}
-}
-
-.nav .navbar-nav {
-	@media (min-width: 767px) {
-		width: 735px;
+		max-width: 374px;
 	}
 }
 
@@ -109,7 +104,7 @@ body.slide-active {
 
 .navbar .menu {
 	@media (min-width: 767px) {
-		width: 770px;
+		width: 800px;
 	}
 }
 
