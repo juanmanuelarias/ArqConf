@@ -42,7 +42,7 @@ module.exports = function (grunt) {
                 files: ['Gruntfile.js']
             },
             compass: {
-                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}','<%= yeoman.app %>/bower_components/sass-bootstrap/lib/{,*/}*.{scss,sass}'],
+                files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
                 tasks: ['compass:server', 'autoprefixer']
             },
             styles: {
@@ -152,12 +152,6 @@ module.exports = function (grunt) {
                 httpFontsPath: '/styles/fonts',
                 relativeAssets: false,
                 assetCacheBuster: false
-            },
-            bootstrap: {
-                options: {
-                    sassDir: '<%= yeoman.app %>/bower_components/sass-bootstrap/lib/',
-                    cssDir: '.tmp/styles'
-                }
             },
             dist: {
                 options: {
@@ -324,12 +318,6 @@ module.exports = function (grunt) {
                         }
                         return path.join(dest, src);
                     }
-                }, {
-                    expand: true,
-                    flatten: true,
-                    cwd: '<%= yeoman.app %>',
-                    src: 'bower_components/' + 'sass-' + 'bootstrap/' + 'fonts/' +'*.*',
-                    dest: '<%= yeoman.dist %>/fonts'
                 }]
             },
             styles: {
@@ -362,7 +350,6 @@ module.exports = function (grunt) {
         concurrent: {
             server: [
                 'compass:server',
-                'compass:bootstrap',
                 'copy:styles'
             ],
             test: [
