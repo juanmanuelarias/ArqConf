@@ -1,7 +1,11 @@
 .sponsors {
-	@extend %page-padding-sm;
-	
+	@extend %page-padding;	
 	text-align: center;
+
+	@media (min-width: $screen-sm-max) {
+		width: 1000px;
+	}
+
 	h3 {
 		color: $blue;
 		font-weight: 600;
