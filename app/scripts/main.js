@@ -3,6 +3,8 @@ $(function() {
   configureOffcanvas();
   toggleSpeakers();
   animateNav();
+
+  new WOW().init();
 });
 
 function configureScroll () {
