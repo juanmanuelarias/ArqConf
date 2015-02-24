@@ -145,30 +145,38 @@ function setupCountdown(targetDate, labels, templateElement, targetElement) {
     });
 
     // Starts the countdown
-    targetElement.countdown(targetDate, function (event) {
-        var newDate = event.strftime('%D:%H:%M:%S'),
-            data;
-        if (newDate !== nextDate) {
-            currDate = nextDate;
-            nextDate = newDate;
-            // Setup the data
-            data = {
-                'curr': strfobj(currDate),
-                'next': strfobj(nextDate)
-            };
-            // Apply the new values to each node that changed
-            diff(data.curr, data.next).forEach(function (label) {
-                var selector = '.%s'.replace(/%s/, label),
-                    $node = targetElement.find(selector);
-                // Update the node
-                $node.removeClass('flip');
-                $node.find('.curr').text(data.curr[label]);
-                $node.find('.next').text(data.next[label]);
-                // Wait for a repaint to then flip
-                _.delay(function ($node) {
-                    $node.addClass('flip');
-                }, 50, $node);
-            });
-        }
-    });
+    targetElement.countdown(targetDate)
+        .on('update.countdown', function (event) {
+            var newDate = event.strftime('%D:%H:%M:%S'),
+                data;
+            if (newDate !== nextDate) {
+                currDate = nextDate;
+                nextDate = newDate;
+                // Setup the data
+                data = {
+                    'curr': strfobj(currDate),
+                    'next': strfobj(nextDate)
+                };
+                // Apply the new values to each node that changed
+                diff(data.curr, data.next).forEach(function (label) {
+                    var selector = '.%s'.replace(/%s/, label),
+                        $node = targetElement.find(selector);
+                    // Update the node
+                    $node.removeClass('flip');
+                    $node.find('.curr').text(data.curr[label]);
+                    $node.find('.next').text(data.next[label]);
+                    // Wait for a repaint to then flip
+                    _.delay(function ($node) {
+                        $node.addClass('flip');
+                    }, 50, $node);
+                });
+            }
+        })
+        .on('update.countdown', function (event) {
+            if (event.offset.seconds === 0) {
+                $('.title').addClass('fadeOut').one('animationend', function () {
+                    $(this).removeClass('fadeOut').addClass('fadeIn');
+                });
+            }
+        });
 }
