@@ -181,9 +181,9 @@ module.exports = function (grunt) {
         },
 
         // Automatically inject Bower components into the HTML file
-        'bower-install': {
-            app: {
-                html: '<%= yeoman.app %>/index.html',
+        wiredep: {
+            task: {
+                src: ['<%= yeoman.app %>/index.html'],
                 ignorePath: '<%= yeoman.app %>/'
             }
         },
@@ -431,7 +431,7 @@ module.exports = function (grunt) {
         'rev',
         'usemin',
         'htmlmin',
-        'bower-install',
+        'wiredep',
         'string-replace:ogimage'
     ]);
 
