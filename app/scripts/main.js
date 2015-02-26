@@ -174,9 +174,9 @@ function setupCountdown(targetDate, labels, templateElement, targetElement) {
         })
         .on('update.countdown', function (event) {
             if (event.offset.seconds === 0) {
-                $('.title').addClass('fadeOut').one('animationend', function () {
+                $('.title').one('animationend', function () {
                     $(this).removeClass('fadeOut').addClass('fadeIn');
-                });
+                }).addClass('fadeOut');
             }
         });
 }
