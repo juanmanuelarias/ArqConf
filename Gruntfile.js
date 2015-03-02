@@ -67,7 +67,7 @@ module.exports = function (grunt) {
                 port: 8080,
                 livereload: 35729,
                 // Change this to '0.0.0.0' to access the server from outside
-                hostname: 'localhost'
+                hostname: '0.0.0.0'
             },
             livereload: {
                 options: {
@@ -181,9 +181,9 @@ module.exports = function (grunt) {
         },
 
         // Automatically inject Bower components into the HTML file
-        wiredep: {
-            task: {
-                src: ['<%= yeoman.app %>/index.html'],
+        'bower-install': {
+            app: {
+                html: '<%= yeoman.app %>/index.html',
                 ignorePath: '<%= yeoman.app %>/'
             }
         },
@@ -323,9 +323,9 @@ module.exports = function (grunt) {
             styles: {
                 expand: true,
                 dot: true,
-                cwd: '<%= yeoman.app %>/styles',
+                cwd: '<%= yeoman.app %>',
                 dest: '.tmp/styles/',
-                src: '{,*/}*.css'
+                src: ['{,*/}*.css', 'bower_components/**/*.css']
             }
         },
 
@@ -392,7 +392,6 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'concurrent:server',
-            'autoprefixer',
             'connect:livereload',
             'watch'
         ]);
@@ -422,7 +421,6 @@ module.exports = function (grunt) {
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
-        'autoprefixer',
         'concat',
         'cssmin',
         'uglify',
@@ -431,7 +429,7 @@ module.exports = function (grunt) {
         'rev',
         'usemin',
         'htmlmin',
-        'wiredep',
+        'bower-install',
         'string-replace:ogimage'
     ]);
 
