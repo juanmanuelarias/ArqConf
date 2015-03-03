@@ -1,9 +1,15 @@
 .program {
 	@extend %page-padding-sm;
-	
+
 	td {
-		line-height: 35px !important;
-		vertical-align: middle;
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        vertical-align: middle !important;
+
+        strong {
+            line-height: 35px;
+            font-size: 16px;
+        }
 	}
 
 	table > tbody > tr:nth-child(1) > td:nth-child(1) {
@@ -13,6 +19,10 @@
 	table > tbody > tr:nth-child(1) > td:nth-child(2) {
 		border-top: inherit;
 	}
+
+    table > tbody > tr > td:first-child {
+        font-size: 16px;
+    }
 
 	table > tbody > tr > td:nth-child(1) {
 		color: rgb(33, 142, 194);
