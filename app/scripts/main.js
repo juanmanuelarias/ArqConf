@@ -171,12 +171,12 @@ function setupCountdown(targetDate, labels, templateElement, targetElement) {
                     }, 50, $node);
                 });
             }
-        })
-        .on('update.countdown', function (event) {
-            if (event.offset.seconds === 0) {
-                $('.title').one('animationend', function () {
-                    $(this).removeClass('fadeOut').addClass('fadeIn');
-                }).addClass('fadeOut');
-            }
         });
+        /*.on('update.countdown', function (event) {
+            if (event.offset.seconds === 0) {
+                _.delay(function (title) {
+                    title.removeClass('fadeOut').addClass('fadeIn');
+                }, 550, $('.title').addClass('fadeOut'));
+            }
+        });*/
 }
