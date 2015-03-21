@@ -84,8 +84,13 @@
     }
 
 	@media (min-width: $screen-sm-min) {
+        .diamond {
+            margin-top: 30px;
+            margin-bottom: 50px;
+        }
+
 		.platinum {
-			margin-top: 10px;
+			margin-top: 20px;
 			margin-bottom: 50px;
 		}
 
