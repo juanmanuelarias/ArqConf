@@ -35,20 +35,41 @@
 		background: #F1F7FC;
 	}
 
+    .add-new-diamond {
+        width: 400px;
+        height: 300px;
+    }
+
+    .diamond a{
+        line-height: 300px;
+    }
+
 	.add-new-platinum {
 		width: 300px;
 		height: 200px;
 	}
+
+    .platinum a{
+        line-height: 200px;
+    }
 
 	.add-new-gold {
 		width: 200px;
 		height: 133px;
 	}
 
+    .gold a{
+        line-height: 133px;
+    }
+
 	.add-new-silver {
 		width: 150px;
 		height: 100px;
 	}
+
+    .silver a{
+        line-height: 100px;
+    }
 
 	.add-new a {
 		display: table-cell;
