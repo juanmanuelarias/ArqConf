@@ -5,7 +5,7 @@ $(function() {
   animateNav();
 
   new WOW().init();
-  setupCountdown('2019/04/24 18:00:00', ['dias', 'horas', 'minutos', 'segundos'], $('#countdown-template'), $('#countdown-container'));
+  setupCountdown('2019/05/30 14:00:00', ['dias', 'horas', 'minutos', 'segundos'], $('#countdown-template'), $('#countdown-container'));
 });
 
 function configureScroll () {
