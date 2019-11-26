@@ -1,0 +1,602 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ArqConf</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<meta property="og:title" content="Meetup - Infrastructure as Code" />
+	<meta property="og:site_name" content="IasCode" />
+	<meta property="og:url" content="http://arqconf.com.ar/iascode/" />
+	<meta property="og:description" content="IasCode es un grupo creado para generar una nueva comunidad de profesionales en IT que estén interesados en las prácticas de Infrastructure as Code, Devops y Site Reliability Engineering. Nuestro objetivo es generar un espacio común para compartir experiencias" />
+	<meta property="og:type" content="website" />
+	<meta property="fb:admins" content="100000467201949" />
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:100,300" type="text/css">
+	<link rel="stylesheet" href="template/styles/main.css?v=2">
+    
+    <link rel="stylesheet" href="template/vendors/animate.css/animate.css">
+	
+	<script src="template/vendors/modernizr/modernizr.js"></script>
+	<!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bd696b7d07bf74"></script> -->
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+	<div class="container-fluid">
+	<!--[if lt IE 10]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<nav class="navbar navbar-default navbar-fixed-top navbar-top" style="background-color: none" role="navigation" id="slide-nav">
+		<a class="navbar-brand hidden-xs hidden-sm link-on-top" href="http://conf4.it">CONF4IT</a>
+		<div class="container-fluid">
+		<div class="container menu">
+			<div class="navbar-header">
+				<a class="navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+			</div>
+			<div id="slidemenu">
+				<ul class="nav navbar-nav">
+					<li style="border-right: 3px solid green" class="active"><a class="link-on-top" href="#landing">Conferencia</a></li>
+					<li style="border-right: 3px solid green"><a class="link-on-top" href="#speakers">Oradores</a></li>
+					<li style="border-right: 3px solid green"><a class="link-on-top" href="#program">Programa</a></li>
+					<li style="border-right: 3px solid green"><a class="link-on-top" href="#tickets">Tickets</a></li>
+					<li style="border-right: 3px solid green"><a class="link-on-top" href="#sponsors">Sponsors</a></li>
+					<li style="border-right: 3px solid green"><a class="link-on-top" href="#venue">Lugar</a></li>
+					<li style="border-right: 0px solid green"><a class="link-on-top" href="../index.html#confs">Otras Iniciativas</a></li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</nav>
+
+	<section id="landing" class="home">
+		<div class="title animated">
+			<div class="title-cover">
+				 <img class="img-responsive hidden-xs" src="images/background-7.jpg"/>
+				 <img class="img-responsive hidden-md hidden-sm hidden-lg" src=""/>
+				  <h1 style="color:rgb(132, 169, 147);">|ARQ<span>CONF</span>|</h1>
+				
+				 <h3>Meetup Infrastructure as Code</h3>
+				
+				 <h3 style="color:green" >Santander Tecnologia - 24 de Octubre de 2019</h3>
+
+                <div class="countdown">
+                    <div class="countdown-container" id="countdown-container">
+                    </div>
+                </div>
+                <script type="text/template" id="countdown-template">
+                    <div class="time <%= label %>">
+                        <span class="count curr top"><%= curr %></span>
+                        <span class="count next top"><%= next %></span>
+                        <span class="count next bottom"><%= next %></span>
+                        <span class="count curr bottom"><%= curr %></span>
+                        <span class="label"><%= label.length < 6 ? label : label.substr(0, 3) %></span>
+                    </div>
+                </script>
+			</div>
+		</div>
+		<div class="register hidden">
+			<a href="#tickets">REGISTRATE GRATIS AQUÍ</a>
+		</div>
+	</section>
+
+	<section>
+		<div  id="about" class="container about">
+			<p class="wow fadeInUp" data-wow-offset="150">IasCode es un grupo creado para generar una nueva comunidad de profesionales en IT que estén interesados en las prácticas de Infrastructure as Code, Devops y Site Reliability Engineering. Nuestro objetivo es generar un espacio común para compartir experiencias</p>
+			<!--<p class="wow fadeIn" data-wow-offset="120" data-wow-duration="1.2s">En esta conferencia, el tema principal será:</p> -->
+			<p class="wow fadeIn" data-wow-offset="120" data-wow-duration="1.2s">
+			<!--	<img style="width:80%" src="images/arqit.png"> -->
+
+			</p>
+			
+		<!--	<p class="conf-title wow fadeIn" data-wow-offset="100" data-wow-duration="1.2s" data-wow-delay="0.5s">"De la aparente solución a tu peor pesadilla"</p>-->
+		</div>
+	</section>
+
+	<section id="speakers">
+		<div class="container speakers">
+			<h2 class="main-title">Oradores</h2>
+			<hr>
+			<ul>
+			<li class="expand wow fadeInUp" data-wow-offset="100">
+					<div class="row row-table">
+						<div class="col-sm-2">
+							<img src="images/claudioacquaviva.jpeg" alt="" class="circle-big">
+						</div>
+						<div class="col-sm-5 name">
+							<h4><a>Claudio Acquaviva</a></h4>
+							<p>Solution Engineer @ Kong Ing</p>
+						</div>
+						<div class="col-sm-5 talk-name">API Gateway y Service Mesh con Tecnologias Kong<span class="more"></span></div>
+					</div>
+					<div class="row hidden">
+						<div class="col-sm-10 col-sm-offset-2 description">
+							<div class="talk">Esta charla abordará los desafíos de las nuevas topologías y arquitectura modernas para aplicaciones que involucran API Gateway, Microservices y Service Mesh en entornos múltiples e híbridos.</div>
+							<div class="about-me">
+								Graduado en Computer Science la Universidade Estadual de Campinas - Unicamp. Su experiencia profesional incluye actividades de consultor y arquitecto de software en proveedores de tecnología multinacional como Oracle, Sun Microsystems, Siebel, Informix y BroadVision. Trabajando en empresas de diversas industrias, fue responsable del diseño de arquitecturas de referencia y creación de prototipos de sistemas críticos. Actualmente es ingeniero de soluciones en Kong, Inc., un proveedor americano de tecnologías API Management, Microservices y Service Mesh en entornos de Cloud Computing y On Premises.
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="expand wow fadeInUp" data-wow-offset="100">
+					<div class="row row-table">
+						<div class="col-sm-2">
+							<img src="images/fernavarro.png" alt="" class="circle-big">
+						</div>
+						<div class="col-sm-5 name">
+							<h4><a>Fernando Navarro</a></h4>
+							<p>Sr Developer at Cloud & Platform @ MercadoLibre</p>
+						</div>
+						<div class="col-sm-5 talk-name"><span class="more">NetCon - Taking control over your network</span></div>
+					</div>
+					<div class="row hidden">
+						<div class="col-sm-10 col-sm-offset-2 description">
+							<div class="talk"></div>
+							<div class="about-me">
+                                <p></p>
+                               
+                            </div>
+						</div>
+					</div>
+				</li>
+				<li class="expand wow fadeInUp" data-wow-offset="100">
+					<div class="row row-table">
+						<div class="col-sm-2">
+							<img src="images/sergioferreira.jpg" alt="" class="circle-big">
+						</div>
+						<div class="col-sm-5 name">
+							<h4><a>Sergio Ferreira</a></h4>
+							<p>Head of Infrastructure Architecture, SRE and Cloud Strategy at Santander Argentina</p>
+						</div>
+						<div class="col-sm-5 talk-name"><span class="more">Hybrid Cloud</span></div>
+					</div>
+					<div class="row hidden">
+						<div class="col-sm-10 col-sm-offset-2 description">
+							<div class="talk">
+							</div>
+							<div class="about-me">
+                                <p></p>
+                                <p></p>
+                                
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="expand wow fadeInUp" data-wow-offset="100">
+					<div class="row row-table">
+						<div class="col-sm-2">
+							<img src="images/juanpi.png" alt="" class="circle-big">
+						</div>
+						<div class="col-sm-5 name">
+							<h4><a>Juan Pi</a></h4>
+							<p>Tech Lead at Cloud & Platform @ MercadoLibre</p>
+						</div>
+						<div class="col-sm-5 talk-name"><span class="more">NetCon - Taking control over your network</span></div>
+					</div>
+					<div class="row hidden">
+						<div class="col-sm-10 col-sm-offset-2 description">
+							<div class="talk">
+							</div>
+							<div class="about-me"><p></p>
+                                
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="expand wow fadeInUp" data-wow-offset="100">
+					<div class="row row-table">
+						<div class="col-sm-2">
+							<img src="images/danieldome.jpg" alt="" class="circle-big">
+						</div>
+						<div class="col-sm-5 name">
+							<h4><a>Daniel Domé</a></h4>
+							<p>Sr SRE @ iTrust Fintech</p>
+						</div>
+						<div class="col-sm-5 talk-name"><span class="more">Nuestra experiencia con Terraform modules y GitLab CI</span></div>
+					</div>
+					<div class="row hidden">
+						<div class="col-sm-10 col-sm-offset-2 description">
+							<div class="talk">
+							</div>
+							<div class="about-me"><p></p>
+                                Evitando un futuro caos reutilizando y centralizando código.
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="expand wow fadeInUp" data-wow-offset="100">
+					<div class="row row-table">
+						<div class="col-sm-2">
+							<img src="images/nico.jpg" alt="" class="circle-big">
+						</div>
+						<div class="col-sm-5 name">
+							<h4><a>Nicolas Gonzalez</a></h4>
+							<p>CTO @ Ingenia</p>
+						</div>
+						<div class="col-sm-5 talk-name"><span class="more">Arquitecturas Modernas de Autenticacion de APIs con Keycloak </span></div>
+					</div>
+					<div class="row hidden">
+						<div class="col-sm-10 col-sm-offset-2 description">
+							<div class="talk">
+							</div>
+							<div class="about-me"><p></p>
+                                
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="expand wow fadeInUp" data-wow-offset="100">
+					<div class="row row-table">
+						<div class="col-sm-2">
+							<img src="images/pablonajt.jpg" alt="" class="circle-big">
+						</div>
+						<div class="col-sm-5 name">
+							<h4><a>Pablo Najt</a></h4>
+							<p>Engineering Director @ Aval Digital Labs</p>
+						</div>
+						<div class="col-sm-5 talk-name"><span class="more">Digitalización en Banca en la Nube de 0 a 100 con IasCode</span></div>
+					</div>
+					<div class="row hidden">
+						<div class="col-sm-10 col-sm-offset-2 description">
+							<div class="talk">
+								Como adoptar Devops de 0 a 100 en un contexto multi-banco en Colombia a través de prácticas de Devops, IasCode y Serverless.
+							</div>
+							<div class="about-me">
+                                <p></p>
+                                <p></p>
+                                
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+        </div>
+	</section>
+
+	<section id="program">
+		<div class="container program">
+			<h2 class="main-title">Programa</h2>
+			<hr>
+			<table class="table" style="text-align: left">
+				<tbody>
+					<tr>
+						<td>16:00</td>
+						<td>
+                            <strong class="col-md-12">Acreditación</strong>
+                        </td>
+					</tr>
+					<tr>
+						<td>16:30</td>
+						<td>
+                            <strong class="col-xs-12">Sergio Ferreira</strong>
+                            <span class="col-xs-12">Hybrid Cloud</span>
+                        </td>
+					</tr>
+					<tr>
+						<td>17:10</td>
+						<td>
+                            <strong class="col-xs-12">Daniel Domé</strong>
+                            <span class="col-xs-12">Nuestra experiencia con Terraform modules y GitLab CI</span>
+                        </td>
+					</tr>
+					<tr>
+						<td>17:50</td>
+						<td>
+                            <strong class="col-xs-12">Fernando Navarro y Juan Pi</strong>
+                            <span class="col-xs-12">NetCon - Taking control over your network</span>
+                        </td>
+					</tr>
+					<tr>
+						<td>18:30</td>
+						<td>
+                            <strong class="col-xs-12">Break</strong>
+                        </td>
+					</tr>
+					<tr>
+						<td>19:00</td>
+						<td>
+                            <strong class="col-xs-12">Pablo Najt</strong>
+                            <span class="col-xs-12">Digitalización en Banca en la Nube de 0 a 100 con IasCode</span>
+                        </td>
+					</tr>
+                    <tr>
+                        <td>19:40</td>
+                        <td>
+                            <strong class="col-xs-12">Claudio Acquaviva</strong>
+							<span class="col-xs-12">API Gateway y Service Mesh con Tecnologias Kong</span>
+						</td>
+                    </tr>
+					<tr>
+						<td>20:10</td>
+						<td>
+                            <strong class="col-xs-12">Nicolas Gonzalez</strong>
+                            <span class="col-xs-12">Arquitecturas Modernas de Autenticacion de APIs con Keycloak</span>
+                        </td>
+					</tr>
+					<tr>
+						<td>20:50</td>
+						<td>
+                            <strong class="col-md-12">Debate / Cierre</strong>
+                        </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	
+	<section id="tickets">
+		<div class="container tickets">
+
+				<h2 class="main-title">Tickets</h2>
+				 <hr/>
+				
+				<div class="row">
+	
+					<div style="text-align:center" class="wow fadeInUp">
+							<a href="https://www.meetup.com/Infrastructure-As-Code-BA/events/265504786/" target="_blank"><img src="images/buttons/meetup.png" alt="Meetup" /></a>
+					</div>
+				</div>
+
+
+			</div>
+	</section>
+
+	
+
+	<section id="sponsors" style="margin:auto;text-align:center">
+		<div class="container sponsors" style="margin:auto">
+			<h2 class="main-title">Sponsors</h2>
+			<hr>
+            <h3 class="hidden">Diamond</h3>
+            <div class="diamond">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-sm-offset-3 col-md-offset-3 col-sm-6 col-md-6 wow fadeInUp">
+                            <a href="#" target="_blank">
+                                <img class="img-resposive" src="../images/santander.png" width="100%"/>
+                            </a>
+                        </div>
+                        <div class="hidden col-sm-offset-3 col-md-offset-3 col-sm-6 col-md-6 wow fadeInUp">
+                            <a href="http://www.ingenia.la" target="_blank">
+                                <img class="img-resposive" src="images/ingenia2.png" width="100%"/>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h3 class="hidden">Platinum</h3>
+            <div class="hidden platinum col-sm-10 col-sm-offset-1">
+				
+				<div class="row">
+                    <div class="col-sm-6 wow fadeInUp" data-wow-offset="100">
+                        <a href="https://www.naranja.com" target="_blank">
+							<img  class="img-responsive" style="width: 99%; padding-top:30px; padding-bottom:20px;" src="http://cdn5.flechabus.com.ar/wp-content-new/uploads/2015/11/NARANJAOK.png">
+                        </a>
+                    </div>
+                    <div class="col-sm-6 wow fadeInUp" data-wow-offset="100">
+                        <a href="https://www.ingenia.la" target="_blank">
+							<img class="img-responsive" style="width: 95%; padding-bottom:30px" src="images/ingenia2.png">
+                        </a>
+                    </div>
+				</div>
+				<div class="row">
+                    <div class="col-sm-6 wow fadeInUp" data-wow-offset="100">
+                        <a href="http://incluit.com/" target="_blank">
+                            <img  class="img-responsive" style="width: 95%; padding-top:45px" src="images/logo_inluit.png">
+                        </a>
+					</div>
+					<div class="col-sm-6 wow fadeInUp" data-wow-offset="100">
+                        <a href="http://www.mercadolibre.com" target="_blank">
+							<img class="img-responsive" style="width: 83%; padding-bottom:20px" src="images/logo_ML.png">
+                        </a>
+                    </div>
+				</div>
+				<div class="row hidden">
+                    <div class="hidden col-sm-6 wow fadeInUp" data-wow-offset="100">
+                        <a href="https://www.virtualmind.io/" target="_blank">
+                            <img  class="img-responsive" style="width: 60%; padding-top:5px" src="images/virtual.png">
+                        </a>
+					</div>
+					<div class="hidden col-sm-6 wow fadeInUp" data-wow-offset="100">
+                        <a href="http://intive-fdv.com.ar/" target="_blank">
+							<img class="img-responsive" style="width: 90%; padding-top:20px" src="images/fdv.png">
+                        </a>
+                    </div>
+				</div>
+
+			
+				<div class="row hidden ">
+                    <div class="col-sm-offset-3 col-sm-6 wow fadeInUp" data-wow-offset="100">
+                        <a href="https://www.ingenia.la/" target="_blank">
+                            <img class="img-responsive" style="padding-bottom:10px" src="images/ingenia.png">
+                        </a>
+                    </div>
+				</div>
+
+
+                <div class="row hidden">
+                    <div class="col-sm-offset-3 col-sm-6 wow fadeInUp" data-wow-offset="100">
+                        <a href="http://www.globallogic.com/" target="_blank">
+                            <img  class="img-responsive" style="padding-bottom:30px" src="images/global_logic_blanco_alta.png">
+                        </a>
+                    </div>
+				</div>
+
+				<div class="row hidden">
+                    <div class="col-sm-offset-3 col-sm-6 wow fadeInUp" data-wow-offset="100">
+                        <a href="https://www.redhat.com" target="_blank">
+                            <img  class="img-responsive" style="width: 80%; padding-bottom:30px" src="images/redhat2.png">
+                        </a>
+                    </div>
+				</div>
+				<div class="row hidden" >
+                    <div class="col-sm-offset-3 col-sm-6 wow fadeInUp" data-wow-offset="100">
+                        <a href="" target="_blank">
+							<img class="img-responsive" style="width: 50%; padding-bottom:30px" src="images/senzil.png">
+                        </a>
+                    </div>
+				</div>
+
+				<div class="row hidden">
+                    <div class="col-sm-offset-3 col-sm-6 wow fadeInUp" data-wow-offset="100">
+                        <a href="" target="_blank">
+                            <img class="img-responsive" src="images/gm2.png" style="width: 75%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h3 class="hidden">Gold</h3>
+            <div class="gold hidden" style="padding-top:10px;">
+                <div class="row">
+                    <div class="col-sm-4 wow fadeInUp" data-wow-offset="100">
+                        <a href="https://www.redhat.com/es" target="_blank">
+                            <img  class="img-responsive" style="width: 80%; padding-bottom:30px" src="images/redhat2.png">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 wow fadeInUp" data-wow-offset="100">
+                        <a href="https://www.senzil.com/" target="_blank">
+                            <img class="img-responsive" style="width: 50%; padding-bottom:30px" src="images/senzil.png">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 wow fadeInDown" data-wow-offset="100">
+                        <a href="http://globalmeaning.com" target="_blank">
+                            <img class="img-responsive" src="images/gm2.png" style="width: 80%;padding-bottom:20px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <h3 class="hidden">Silver</h3>
+            <div class="silver hidden">
+                <div class="row">
+                    <div class="col-sm-4 wow fadeInUp" data-wow-offset="50">
+                        <a href="http://www.kleer.la/" target="_blank">
+                            <img src="images/KLEER-silver.png">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 wow fadeInUp" data-wow-offset="50">
+                        <a href="http://www.hexacta.com/" target="_blank">
+                            <img src="images/HEXACTA-silver.png">
+                        </a>
+                    </div>
+                    <div class="col-sm-4 wow fadeInUp" data-wow-offset="50">
+                        <a href="http://www.patagonian.it/" target="_blank">
+                            <img src="images/PatagonianTech-silver.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row sponsor-contact col-xs-12 wow fadeIn" data-wow-offset="75">
+                <a href="mailto:sponsors@conf4.it?subject=ArqConf 2018 Sponsorship">Quiero ser Sponsor!</a>
+            </div>
+		</div>
+	</section>
+
+	<section id="organizers">
+		<div class="organizers container">
+			<h2 class="main-title">Organizadores</h2>
+			<hr>
+			<div class="row about-conf" >
+				<div class="col-md-12 wow fadeIn" data-wow-duration="1.5s" data-wow-offset="100">
+					<div class="text-center">
+                        <a href="http://conf4.it">
+						    <img class="img-responsive" src="images/image.png">
+                        </a>
+					</div>
+				</div>
+			</div>
+        </div>
+	</section>
+
+    <section id="support" class="hidden" >
+        <div class="container support col-sm-12 col-sm-offset-0">
+            <h2 class="second-title">Apoyan</h2>
+            <hr>
+            <div class="row row-table">
+                <div class="col-xs-12 col-sm-2 wow fadeIn" data-wow-duration="1s" data-wow-offset="100" data-wow-delay="0.5s">
+                    <a href="http://www.fundacionsadosky.org.ar/" target="_blank">
+                        <img class="img-responsive" src="images/sadosky.png">
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-2 wow fadeIn" data-wow-duration="1s" data-wow-offset="100" data-wow-delay="1s">
+                    <a href="http://www.uqbar-project.org/" target="_blank">
+                        <img class="img-responsive" src="images/logoUqbar.png">
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+	<section id="venue">
+		<div class="venue support">
+		<div class="container ">
+			<h2 class="main-title">Lugar</h2>
+			<hr>
+			<h3>Fundacion Santander, Ciudad de Buenos Aires, Argentina</h3>
+		</div>
+            <div class="overlaymap" onClick="style.pointerEvents='none'"></div>
+		
+		<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26264.069880227664!2d-58.41784718525921!3d-34.62921954896278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a335a17024b9f3%3A0x4d4d1a7733e94d70!2sFundaci%C3%B3n%20Santander!5e0!3m2!1ses-419!2sar!4v1569420094893!5m2!1ses-419!2sar" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</section>
+
+	<!--
+	<section id="contact-us" class="hidden">
+		<div class="contact-us container">
+			<h2 class="main-title">Contacto</h2>
+			<hr>
+			<div class="row contact-info">
+				<div class="col-sm-3">
+					<a href="http://twitter.com/arqconf" class="social-icons-twitter"></a>
+				</div>
+				<div class="col-sm-3">
+					<a href="https://www.facebook.com/arqconf.forit" class="social-icons-facebook"></a>
+				</div>
+				<div class="col-sm-3">
+					<a href="http://www.meetup.com/ArquitecturaDeSoftware" class="social-icons-meetup"></a>
+				</div>
+				<div class="col-sm-3">
+					<a rel="contactus" class="social-icons-email"></a>
+				</div>
+			</div>
+		</div>
+	</section>
+-->
+
+	<div class="container">
+		<div class="footer">
+			<p>arqconf.com.ar</p>
+		</div>
+	</div>
+
+	<script src="template/vendors/jquery/jquery.js"></script>
+	<script src="template/vendors/sass-bootstrap/dist/js/bootstrap.js"></script>
+	<!--<script src="template/vendors/holderjs/holder.js"></script>-->
+	<script src="template/vendors/underscore/underscore.js"></script>
+	<script src="template/vendors/jquery.countdown/dist/jquery.countdown.js">
+	</script>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-37230564-6', 'arqconf.com.ar');
+	  ga('send', 'pageview');
+	</script>
+
+	<!-- build:js({app,.tmp}) scripts/main.js -->	
+	<script src="template/scripts/wow.min.js"></script>
+    <script src="template/scripts/main.js"></script>
+	<!-- endbuild -->
+</div>
+</body>
+</html>
